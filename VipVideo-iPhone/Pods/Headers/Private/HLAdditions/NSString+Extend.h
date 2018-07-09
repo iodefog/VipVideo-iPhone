@@ -1,0 +1,1 @@
+../../../HLAdditions/HLAdditions/NSString+Extend.h

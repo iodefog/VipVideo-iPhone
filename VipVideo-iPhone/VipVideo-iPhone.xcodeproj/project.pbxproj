@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
+		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
+		C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */; };
+		C70C3CD420C920E000BC52E3 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */; };
+		C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD020C920E000BC52E3 /* WMLightView.m */; };
+		C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD120C920E000BC52E3 /* FastForwardView.m */; };
+		C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD220C920E000BC52E3 /* WMPlayer.m */; };
+		C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */; };
+		C714E56A20C8E38600647A96 /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */; };
+		C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A951FA174D3000684F1 /* AppDelegate.m */; };
+		C7240A991FA174D3000684F1 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A981FA174D3000684F1 /* HLHomeViewController.m */; };
+		C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9A1FA174D3000684F1 /* Main.storyboard */; };
+		C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9D1FA174D3000684F1 /* Assets.xcassets */; };
+		C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */; };
+		C7240AA41FA174D3000684F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AA31FA174D3000684F1 /* main.m */; };
+		C7240AAE1FA17A66000684F1 /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AAD1FA17A66000684F1 /* VipURLManager.m */; };
+		C7240AB41FA17AFD000684F1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AB21FA17AFC000684F1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */ = {isa = PBXBuildFile; fileRef = C7240ABB1FA17EB7000684F1 /* mviplist.json */; };
+		C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; };
+		C72675C820E08A2A00D1F92E /* HLDownload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7ECD24620C7D9D3001E45B4 /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */; };
+		C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */; };
+		C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3E2029A33C003C058B /* DownloadViewController.m */; };
+		C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB412029A33C003C058B /* FinishedViewController.m */; };
+		C7F1AB492029A33C003C058B /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB442029A33C003C058B /* DownLoadCell.m */; };
+		C7F1AB4A2029A33C003C058B /* AppDelegate+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB452029A33C003C058B /* AppDelegate+Download.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C72675C520E08A2100D1F92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C726758C20E0893000D1F92E;
+			remoteInfo = HLDownload;
+		};
+		C72675C920E08A2A00D1F92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C726758B20E0893000D1F92E;
+			remoteInfo = HLDownload;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C72675CB20E08A2A00D1F92E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C72675C820E08A2A00D1F92E /* HLDownload.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
+		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
+		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
+		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayerModel.m; sourceTree = "<group>"; };
+		C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		C70C3CCB20C920E000BC52E3 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		C70C3CCC20C920E000BC52E3 /* WMPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayerModel.h; sourceTree = "<group>"; };
+		C70C3CCE20C920E000BC52E3 /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
+		C70C3CCF20C920E000BC52E3 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
+		C70C3CD020C920E000BC52E3 /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
+		C70C3CD120C920E000BC52E3 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
+		C70C3CD220C920E000BC52E3 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerViewController.h; sourceTree = "<group>"; };
+		C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerViewController.m; sourceTree = "<group>"; };
+		C714E56820C8E38600647A96 /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
+		C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
+		C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VipVideo-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7240A941FA174D3000684F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7240A951FA174D3000684F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7240A971FA174D3000684F1 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		C7240A981FA174D3000684F1 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		C7240A9B1FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7240A9D1FA174D3000684F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7240AA01FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7240AA21FA174D3000684F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7240AA31FA174D3000684F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7240AAC1FA17A66000684F1 /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
+		C7240AAD1FA17A66000684F1 /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
+		C7240AB21FA17AFC000684F1 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		C7240AB31FA17AFD000684F1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		C7240ABB1FA17EB7000684F1 /* mviplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mviplist.json; sourceTree = "<group>"; };
+		C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HLDownload.xcodeproj; path = HLDownload/HLDownload.xcodeproj; sourceTree = "<group>"; };
+		C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridNSURLProtocol.m; sourceTree = "<group>"; };
+		C7ECD24420C7D9D3001E45B4 /* HybridNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridNSURLProtocol.h; sourceTree = "<group>"; };
+		C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPDownloadTool.m; sourceTree = "<group>"; };
+		C7F1AB3D2029A33C003C058B /* FinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedViewController.h; sourceTree = "<group>"; };
+		C7F1AB3E2029A33C003C058B /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		C7F1AB3F2029A33C003C058B /* DownLoadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
+		C7F1AB402029A33C003C058B /* AppDelegate+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Download.h"; sourceTree = "<group>"; };
+		C7F1AB412029A33C003C058B /* FinishedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedViewController.m; sourceTree = "<group>"; };
+		C7F1AB422029A33C003C058B /* QSPDownloadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPDownloadTool.h; sourceTree = "<group>"; };
+		C7F1AB432029A33C003C058B /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		C7F1AB442029A33C003C058B /* DownLoadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
+		C7F1AB452029A33C003C058B /* AppDelegate+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Download.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7240A8E1FA174D3000684F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */,
+				088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F9E4F54096B0295DE574240 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */,
+				3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B0076D6332F4C32AECFFA55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70C3CC820C920E000BC52E3 /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */,
+				C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */,
+				C70C3CCB20C920E000BC52E3 /* WMPlayer.h */,
+				C70C3CCC20C920E000BC52E3 /* WMPlayerModel.h */,
+				C70C3CCD20C920E000BC52E3 /* View */,
+				C70C3CD220C920E000BC52E3 /* WMPlayer.m */,
+			);
+			path = WMPlayer;
+			sourceTree = "<group>";
+		};
+		C70C3CCD20C920E000BC52E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C70C3CCE20C920E000BC52E3 /* WMLightView.h */,
+				C70C3CCF20C920E000BC52E3 /* FastForwardView.h */,
+				C70C3CD020C920E000BC52E3 /* WMLightView.m */,
+				C70C3CD120C920E000BC52E3 /* FastForwardView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7240A881FA174D3000684F1 = {
+			isa = PBXGroup;
+			children = (
+				C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */,
+				C7240A931FA174D3000684F1 /* VipVideo-iPhone */,
+				C7240A921FA174D3000684F1 /* Products */,
+				2F9E4F54096B0295DE574240 /* Pods */,
+				3B0076D6332F4C32AECFFA55 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7240A921FA174D3000684F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7240A931FA174D3000684F1 /* VipVideo-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C7240A941FA174D3000684F1 /* AppDelegate.h */,
+				C7240A951FA174D3000684F1 /* AppDelegate.m */,
+				C7240A971FA174D3000684F1 /* HLHomeViewController.h */,
+				C7240A981FA174D3000684F1 /* HLHomeViewController.m */,
+				C7240AAC1FA17A66000684F1 /* VipURLManager.h */,
+				C7240AAD1FA17A66000684F1 /* VipURLManager.m */,
+				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
+				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
+				C7240AB31FA17AFD000684F1 /* JSONKit.h */,
+				C7240AB21FA17AFC000684F1 /* JSONKit.m */,
+				C7ECD24120C7D9D3001E45B4 /* NSURLProtocol */,
+				C7240ABB1FA17EB7000684F1 /* mviplist.json */,
+				C70C3CC820C920E000BC52E3 /* WMPlayer */,
+				C7F1AB3B2029A33C003C058B /* QSPDownload */,
+				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
+				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
+				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
+				C7240AA21FA174D3000684F1 /* Info.plist */,
+				C7240AA31FA174D3000684F1 /* main.m */,
+				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
+				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
+			);
+			path = "VipVideo-iPhone";
+			sourceTree = "<group>";
+		};
+		C72675C220E08A2100D1F92E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C72675C620E08A2100D1F92E /* HLDownload.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7ECD24120C7D9D3001E45B4 /* NSURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C7ECD24420C7D9D3001E45B4 /* HybridNSURLProtocol.h */,
+				C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */,
+				C714E56820C8E38600647A96 /* NSURLProtocol+WKWebVIew.h */,
+				C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */,
+			);
+			path = NSURLProtocol;
+			sourceTree = "<group>";
+		};
+		C7F1AB3B2029A33C003C058B /* QSPDownload */ = {
+			isa = PBXGroup;
+			children = (
+				C7F1AB432029A33C003C058B /* DownloadViewController.h */,
+				C7F1AB3E2029A33C003C058B /* DownloadViewController.m */,
+				C7F1AB3D2029A33C003C058B /* FinishedViewController.h */,
+				C7F1AB412029A33C003C058B /* FinishedViewController.m */,
+				C7F1AB3F2029A33C003C058B /* DownLoadCell.h */,
+				C7F1AB442029A33C003C058B /* DownLoadCell.m */,
+				C7F1AB422029A33C003C058B /* QSPDownloadTool.h */,
+				C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */,
+				C7F1AB402029A33C003C058B /* AppDelegate+Download.h */,
+				C7F1AB452029A33C003C058B /* AppDelegate+Download.m */,
+			);
+			path = QSPDownload;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7240A901FA174D3000684F1 /* VipVideo-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7240AA71FA174D3000684F1 /* Build configuration list for PBXNativeTarget "VipVideo-iPhone" */;
+			buildPhases = (
+				6B742387FC91B716597E8EF9 /* [CP] Check Pods Manifest.lock */,
+				C7240A8D1FA174D3000684F1 /* Sources */,
+				C7240A8E1FA174D3000684F1 /* Frameworks */,
+				C7240A8F1FA174D3000684F1 /* Resources */,
+				A69892C1BD1C8F0115A4039D /* [CP] Copy Pods Resources */,
+				C72675CB20E08A2A00D1F92E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C72675CA20E08A2A00D1F92E /* PBXTargetDependency */,
+			);
+			name = "VipVideo-iPhone";
+			productName = "VipVideo-iPhone";
+			productReference = C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7240A891FA174D3000684F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = SV;
+				TargetAttributes = {
+					C7240A901FA174D3000684F1 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C7240A8C1FA174D3000684F1 /* Build configuration list for PBXProject "VipVideo-iPhone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7240A881FA174D3000684F1;
+			productRefGroup = C7240A921FA174D3000684F1 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C72675C220E08A2100D1F92E /* Products */;
+					ProjectRef = C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				C7240A901FA174D3000684F1 /* VipVideo-iPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C72675C620E08A2100D1F92E /* HLDownload.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HLDownload.framework;
+			remoteRef = C72675C520E08A2100D1F92E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7240A8F1FA174D3000684F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
+				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
+				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
+				C70C3CD420C920E000BC52E3 /* WMPlayer.bundle in Resources */,
+				C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B742387FC91B716597E8EF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VipVideo-iPhone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69892C1BD1C8F0115A4039D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-resources.sh",
+				"${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle",
+				"${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle",
+				"${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXIndicatorView.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXPracticalHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXWebViewController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7240A8D1FA174D3000684F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */,
+				C7F1AB4A2029A33C003C058B /* AppDelegate+Download.m in Sources */,
+				C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */,
+				C7ECD24620C7D9D3001E45B4 /* HybridNSURLProtocol.m in Sources */,
+				C7240A991FA174D3000684F1 /* HLHomeViewController.m in Sources */,
+				C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */,
+				C7240AA41FA174D3000684F1 /* main.m in Sources */,
+				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
+				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,
+				4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */,
+				C714E56A20C8E38600647A96 /* NSURLProtocol+WKWebVIew.m in Sources */,
+				C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */,
+				C7240AAE1FA17A66000684F1 /* VipURLManager.m in Sources */,
+				C7F1AB492029A33C003C058B /* DownLoadCell.m in Sources */,
+				C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */,
+				C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */,
+				C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */,
+				C7240AB41FA17AFD000684F1 /* JSONKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C72675CA20E08A2A00D1F92E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HLDownload;
+			targetProxy = C72675C920E08A2A00D1F92E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7240A9A1FA174D3000684F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7240A9B1FA174D3000684F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7240AA01FA174D3000684F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C7240AA51FA174D3000684F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C7240AA61FA174D3000684F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7240AA81FA174D3000684F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M675EFBDE2;
+				INFOPLIST_FILE = "VipVideo-iPhone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "dbf2da26-dff7-469f-b413-584944b49abc";
+				PROVISIONING_PROFILE_SPECIFIER = vipvideo_Dev;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7240AA91FA174D3000684F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = M675EFBDE2;
+				INFOPLIST_FILE = "VipVideo-iPhone/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7e347f5b-4673-4593-bcfc-b65051128cdc";
+				PROVISIONING_PROFILE_SPECIFIER = vipvideo_Distribution;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7240A8C1FA174D3000684F1 /* Build configuration list for PBXProject "VipVideo-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7240AA51FA174D3000684F1 /* Debug */,
+				C7240AA61FA174D3000684F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7240AA71FA174D3000684F1 /* Build configuration list for PBXNativeTarget "VipVideo-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7240AA81FA174D3000684F1 /* Debug */,
+				C7240AA91FA174D3000684F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7240A891FA174D3000684F1 /* Project object */;
+}

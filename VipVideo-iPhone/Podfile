@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+
+inhibit_all_warnings!
+
+target 'VipVideo-iPhone' do
+
+pod 'AXWebViewController'
+pod 'HLAdditions'
+pod 'FTPopOverMenu'
+#pod 'TOWebViewController'
+pod 'Masonry'
+pod 'CocoaHTTPServer'
+
+end
