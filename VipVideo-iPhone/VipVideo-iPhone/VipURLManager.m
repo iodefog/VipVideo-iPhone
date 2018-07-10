@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "JSONKit.h"
 
-//#error 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
+#error 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
 #define OnlineVipUrl @"xxx/mviplist.json"
 
 @implementation VipUrlItem
