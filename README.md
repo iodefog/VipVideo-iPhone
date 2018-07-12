@@ -6,6 +6,11 @@
 
 * 本软件仅供学习参考，切勿商业使用。接口数据均来源于互联网。如有侵权，请联系删除。
 
+## VipVideo For Mac 
+
+[https://github.com/iodefog/VipVideo](https://github.com/iodefog/VipVideo.git)
+
+---
 
 ## 软件功能介绍：
 
