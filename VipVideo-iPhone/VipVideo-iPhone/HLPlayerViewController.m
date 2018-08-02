@@ -86,7 +86,7 @@
 
 
     self.wmPlayer = [WMPlayer playerWithModel:playerModel];;
-    self.wmPlayer.canDownload = YES;
+    self.wmPlayer.canDownload = self.canDownload;
     [self.view addSubview:self.wmPlayer];
     [self.wmPlayer mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(self.view);

@@ -9,25 +9,30 @@
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
 		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
+		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
+		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
+		C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */; };
+		C70B57AA2112AC200024D60B /* NSURLProtocol+UIWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */; };
+		C70B57AE2112AC590024D60B /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57AC2112AC590024D60B /* HLHomeViewController.m */; };
+		C70B57BB2112AEFA0024D60B /* HLTVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */; };
+		C70B57BC2112AEFA0024D60B /* HLTVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */; };
+		C70B57C42112AF1C0024D60B /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57BF2112AF1C0024D60B /* MMovieModel.m */; };
+		C70B57C52112AF1C0024D60B /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57C32112AF1C0024D60B /* ListTableViewCell.m */; };
 		C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */; };
 		C70C3CD420C920E000BC52E3 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */; };
 		C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD020C920E000BC52E3 /* WMLightView.m */; };
 		C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD120C920E000BC52E3 /* FastForwardView.m */; };
 		C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD220C920E000BC52E3 /* WMPlayer.m */; };
 		C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */; };
-		C714E56A20C8E38600647A96 /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */; };
 		C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A951FA174D3000684F1 /* AppDelegate.m */; };
-		C7240A991FA174D3000684F1 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A981FA174D3000684F1 /* HLHomeViewController.m */; };
 		C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9A1FA174D3000684F1 /* Main.storyboard */; };
 		C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9D1FA174D3000684F1 /* Assets.xcassets */; };
 		C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */; };
 		C7240AA41FA174D3000684F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AA31FA174D3000684F1 /* main.m */; };
-		C7240AAE1FA17A66000684F1 /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AAD1FA17A66000684F1 /* VipURLManager.m */; };
-		C7240AB41FA17AFD000684F1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AB21FA17AFC000684F1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */ = {isa = PBXBuildFile; fileRef = C7240ABB1FA17EB7000684F1 /* mviplist.json */; };
 		C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; };
 		C72675C820E08A2A00D1F92E /* HLDownload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C7ECD24620C7D9D3001E45B4 /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */; };
 		C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */; };
 		C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3E2029A33C003C058B /* DownloadViewController.m */; };
 		C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB412029A33C003C058B /* FinishedViewController.m */; };
@@ -72,6 +77,26 @@
 		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
 		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
 		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
+		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		C70B579D2112AC200024D60B /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
+		C70B579E2112AC200024D60B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridNSURLProtocol.m; sourceTree = "<group>"; };
+		C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
+		C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+UIWebVIew.m"; sourceTree = "<group>"; };
+		C70B57A32112AC200024D60B /* HybridNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridNSURLProtocol.h; sourceTree = "<group>"; };
+		C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
+		C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+UIWebVIew.h"; sourceTree = "<group>"; };
+		C70B57AC2112AC590024D60B /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		C70B57AD2112AC590024D60B /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		C70B57B72112AEF90024D60B /* HLTVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVHomeViewController.h; sourceTree = "<group>"; };
+		C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVHomeViewController.m; sourceTree = "<group>"; };
+		C70B57B92112AEF90024D60B /* HLTVListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVListViewController.h; sourceTree = "<group>"; };
+		C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVListViewController.m; sourceTree = "<group>"; };
+		C70B57BE2112AF1C0024D60B /* MMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMovieModel.h; sourceTree = "<group>"; };
+		C70B57BF2112AF1C0024D60B /* MMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMovieModel.m; sourceTree = "<group>"; };
+		C70B57C22112AF1C0024D60B /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		C70B57C32112AF1C0024D60B /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 		C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayerModel.m; sourceTree = "<group>"; };
 		C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
 		C70C3CCB20C920E000BC52E3 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
@@ -83,26 +108,16 @@
 		C70C3CD220C920E000BC52E3 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerViewController.h; sourceTree = "<group>"; };
 		C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerViewController.m; sourceTree = "<group>"; };
-		C714E56820C8E38600647A96 /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
-		C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WKWebVIew.m"; sourceTree = "<group>"; };
 		C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VipVideo-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7240A941FA174D3000684F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7240A951FA174D3000684F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C7240A971FA174D3000684F1 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
-		C7240A981FA174D3000684F1 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
 		C7240A9B1FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7240A9D1FA174D3000684F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7240AA01FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7240AA21FA174D3000684F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7240AA31FA174D3000684F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C7240AAC1FA17A66000684F1 /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
-		C7240AAD1FA17A66000684F1 /* VipURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipURLManager.m; sourceTree = "<group>"; };
-		C7240AB21FA17AFC000684F1 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		C7240AB31FA17AFD000684F1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		C7240ABB1FA17EB7000684F1 /* mviplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mviplist.json; sourceTree = "<group>"; };
 		C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HLDownload.xcodeproj; path = HLDownload/HLDownload.xcodeproj; sourceTree = "<group>"; };
-		C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridNSURLProtocol.m; sourceTree = "<group>"; };
-		C7ECD24420C7D9D3001E45B4 /* HybridNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridNSURLProtocol.h; sourceTree = "<group>"; };
 		C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPDownloadTool.m; sourceTree = "<group>"; };
 		C7F1AB3D2029A33C003C058B /* FinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedViewController.h; sourceTree = "<group>"; };
 		C7F1AB3E2029A33C003C058B /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
@@ -143,6 +158,92 @@
 				683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70B579A2112AC200024D60B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C70B579B2112AC200024D60B /* VipURLManager.h */,
+				C70B579C2112AC200024D60B /* JSONKit.m */,
+				C70B579D2112AC200024D60B /* VipURLManager.m */,
+				C70B579E2112AC200024D60B /* JSONKit.h */,
+				C70B579F2112AC200024D60B /* NSURLProtocol */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C70B579F2112AC200024D60B /* NSURLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */,
+				C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */,
+				C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */,
+				C70B57A32112AC200024D60B /* HybridNSURLProtocol.h */,
+				C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */,
+				C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */,
+			);
+			path = NSURLProtocol;
+			sourceTree = "<group>";
+		};
+		C70B57AB2112AC590024D60B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C70B57AC2112AC590024D60B /* HLHomeViewController.m */,
+				C70B57AD2112AC590024D60B /* HLHomeViewController.h */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C70B57B22112AC950024D60B /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				C70B57B72112AEF90024D60B /* HLTVHomeViewController.h */,
+				C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */,
+				C70B57B92112AEF90024D60B /* HLTVListViewController.h */,
+				C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */,
+				C70B57BD2112AF1C0024D60B /* Model */,
+				C70B57C12112AF1C0024D60B /* View */,
+			);
+			path = TV;
+			sourceTree = "<group>";
+		};
+		C70B57B62112ACA50024D60B /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
+				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
+				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
+				C7240AA21FA174D3000684F1 /* Info.plist */,
+				C7240ABB1FA17EB7000684F1 /* mviplist.json */,
+				C7240AA31FA174D3000684F1 /* main.m */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		C70B57BD2112AF1C0024D60B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C70B57BE2112AF1C0024D60B /* MMovieModel.h */,
+				C70B57BF2112AF1C0024D60B /* MMovieModel.m */,
+				C70B57C02112AF1C0024D60B /* AdvancedBarrage */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C70B57C02112AF1C0024D60B /* AdvancedBarrage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdvancedBarrage;
+			sourceTree = "<group>";
+		};
+		C70B57C12112AF1C0024D60B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C70B57C22112AF1C0024D60B /* ListTableViewCell.h */,
+				C70B57C32112AF1C0024D60B /* ListTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C70C3CC820C920E000BC52E3 /* WMPlayer */ = {
@@ -193,25 +294,16 @@
 			children = (
 				C7240A941FA174D3000684F1 /* AppDelegate.h */,
 				C7240A951FA174D3000684F1 /* AppDelegate.m */,
-				C7240A971FA174D3000684F1 /* HLHomeViewController.h */,
-				C7240A981FA174D3000684F1 /* HLHomeViewController.m */,
-				C7240AAC1FA17A66000684F1 /* VipURLManager.h */,
-				C7240AAD1FA17A66000684F1 /* VipURLManager.m */,
-				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
-				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
-				C7240AB31FA17AFD000684F1 /* JSONKit.h */,
-				C7240AB21FA17AFC000684F1 /* JSONKit.m */,
-				C7ECD24120C7D9D3001E45B4 /* NSURLProtocol */,
-				C7240ABB1FA17EB7000684F1 /* mviplist.json */,
-				C70C3CC820C920E000BC52E3 /* WMPlayer */,
-				C7F1AB3B2029A33C003C058B /* QSPDownload */,
-				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
-				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
-				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
-				C7240AA21FA174D3000684F1 /* Info.plist */,
-				C7240AA31FA174D3000684F1 /* main.m */,
 				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
 				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
+				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
+				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
+				C70B57B22112AC950024D60B /* TV */,
+				C70B57AB2112AC590024D60B /* Home */,
+				C70B579A2112AC200024D60B /* Data */,
+				C70C3CC820C920E000BC52E3 /* WMPlayer */,
+				C7F1AB3B2029A33C003C058B /* QSPDownload */,
+				C70B57B62112ACA50024D60B /* Support File */,
 			);
 			path = "VipVideo-iPhone";
 			sourceTree = "<group>";
@@ -222,17 +314,6 @@
 				C72675C620E08A2100D1F92E /* HLDownload.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C7ECD24120C7D9D3001E45B4 /* NSURLProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				C7ECD24420C7D9D3001E45B4 /* HybridNSURLProtocol.h */,
-				C7ECD24220C7D9D3001E45B4 /* HybridNSURLProtocol.m */,
-				C714E56820C8E38600647A96 /* NSURLProtocol+WKWebVIew.h */,
-				C714E56920C8E38600647A96 /* NSURLProtocol+WKWebVIew.m */,
-			);
-			path = NSURLProtocol;
 			sourceTree = "<group>";
 		};
 		C7F1AB3B2029A33C003C058B /* QSPDownload */ = {
@@ -388,24 +469,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70B57AA2112AC200024D60B /* NSURLProtocol+UIWebVIew.m in Sources */,
 				C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */,
+				C70B57BC2112AEFA0024D60B /* HLTVListViewController.m in Sources */,
+				C70B57A72112AC200024D60B /* VipURLManager.m in Sources */,
 				C7F1AB4A2029A33C003C058B /* AppDelegate+Download.m in Sources */,
 				C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */,
-				C7ECD24620C7D9D3001E45B4 /* HybridNSURLProtocol.m in Sources */,
-				C7240A991FA174D3000684F1 /* HLHomeViewController.m in Sources */,
+				C70B57C42112AF1C0024D60B /* MMovieModel.m in Sources */,
 				C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */,
+				C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */,
 				C7240AA41FA174D3000684F1 /* main.m in Sources */,
+				C70B57BB2112AEFA0024D60B /* HLTVHomeViewController.m in Sources */,
+				C70B57A62112AC200024D60B /* JSONKit.m in Sources */,
+				C70B57C52112AF1C0024D60B /* ListTableViewCell.m in Sources */,
+				C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
 				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,
+				C70B57AE2112AC590024D60B /* HLHomeViewController.m in Sources */,
 				4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */,
-				C714E56A20C8E38600647A96 /* NSURLProtocol+WKWebVIew.m in Sources */,
 				C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */,
-				C7240AAE1FA17A66000684F1 /* VipURLManager.m in Sources */,
 				C7F1AB492029A33C003C058B /* DownLoadCell.m in Sources */,
 				C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */,
 				C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */,
 				C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */,
-				C7240AB41FA17AFD000684F1 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +641,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M675EFBDE2;
-				INFOPLIST_FILE = "VipVideo-iPhone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,7 +660,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M675EFBDE2;
-				INFOPLIST_FILE = "VipVideo-iPhone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
