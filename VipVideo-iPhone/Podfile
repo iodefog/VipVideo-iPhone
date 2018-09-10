@@ -11,5 +11,6 @@ pod 'FTPopOverMenu'
 #pod 'TOWebViewController'
 pod 'Masonry'
 pod 'CocoaHTTPServer'
+pod 'Bugly'
 
 end

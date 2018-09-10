@@ -9,6 +9,7 @@ PODS:
     - AXNavigationBackItemInjection
     - AXPracticalHUD
     - NJKWebViewProgress
+  - Bugly (2.5.0)
   - CocoaAsyncSocket (7.6.3)
   - CocoaHTTPServer (2.3):
     - CocoaAsyncSocket
@@ -30,6 +31,7 @@ PODS:
 
 DEPENDENCIES:
   - AXWebViewController
+  - Bugly
   - CocoaHTTPServer
   - FTPopOverMenu
   - HLAdditions
@@ -42,6 +44,7 @@ SPEC REPOS:
     - AXNavigationBackItemInjection
     - AXPracticalHUD
     - AXWebViewController
+    - Bugly
     - CocoaAsyncSocket
     - CocoaHTTPServer
     - CocoaLumberjack
@@ -56,6 +59,7 @@ SPEC CHECKSUMS:
   AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
   AXPracticalHUD: 821d170b31e050c426ef8754b07b4264a8b1d861
   AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
@@ -64,6 +68,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
 
-PODFILE CHECKSUM: 4d73c50e47133d087ecb6c7694b99a02b792531f
+PODFILE CHECKSUM: aea9c5bf463831bd4247d042a46111a18af1fe8b
 
 COCOAPODS: 1.5.3

@@ -10,6 +10,7 @@
 #import "VipURLManager.h"
 #import "QSPDownloadTool.h"
 #import "NSURLProtocol+WKWebVIew.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -24,6 +25,7 @@
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
+    [Bugly startWithAppId:@"c436559ac2"];
     
     [VipURLManager sharedInstance];
     [[QSPDownloadTool shareInstance] startAllTask];
