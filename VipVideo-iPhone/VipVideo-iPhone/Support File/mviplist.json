@@ -1,10 +1,47 @@
 {
     "platformlist":[
                     {
-                    "name":"某平台",
-                    "url":"http://www.iqiyi.com"
+                    "name":"爱奇艺",
+                    "url":"http://www.iqiyi.com/"
+                    },
+                    {
+                    "name":"腾讯视频",
+                    "url":"https://v.qq.com/"
+                    },
+                    {
+                    "name":"芒果",
+                    "url":"https://www.mgtv.com/"
+                    },
+                    {
+                    "name":"优酷",
+                    "url":"https://www.youku.com/"
+                    },
+                    {
+                    "name":"乐视视频",
+                    "url":"https://www.le.com/"
+                    },
+                    {
+                    "name":"搜狐视频",
+                    "url":"https://tv.sohu.com/"
+                    },
+                    {
+                    "name":"52影院",
+                    "url":"http://www.52xsba.com/"
+                    },
+                    {
+                    "name":"4080新视觉影院",
+                    "url":"http://www.yy4080.com/"
+                    },
+                    {
+                    "name":"电影天堂",
+                    "url":"http://www.btbtdy.net/"
                     }
                     ],
+    
+    "default":{
+        "name": "5月-8",
+        "url": "http://api.visaok.net/?url="
+    },
     
     "list": [
              {

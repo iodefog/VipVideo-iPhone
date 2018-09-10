@@ -6,7 +6,7 @@
 
 * 本软件仅供学习参考，切勿商业使用。接口数据均来源于互联网。如有侵权，请联系删除。
 
-## VipVideo For Mac 
+## VipVideo For Mac 地址 
 
 [https://github.com/iodefog/VipVideo](https://github.com/iodefog/VipVideo.git)
 
@@ -32,6 +32,29 @@
 * Todo
 	* 下载中的视频异常丢失bug
 	* 其他bug
+
+---
+
+## 解析源（需要代码自行配置）
+
+1.VipURLManager.m
+
+```
+#import "VipURLManager.h"
+#import "AppDelegate.h"
+#import "JSONKit.h"
+
+#warning 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
+
+#define OnlineVipUrl @"xxx/mviplist.json"
+
+@implementation VipUrlItem
+
+```
+
+2.线上配置json地址:(也可以使用本地包地址，有时间我就会更新)
+
+[https://iodefog.github.io/text/mviplist.json](https://iodefog.github.io/text/mviplist.json)
 
 ---
 

@@ -177,9 +177,9 @@
 			children = (
 				C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */,
 				C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */,
+				C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */,
 				C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */,
 				C70B57A32112AC200024D60B /* HybridNSURLProtocol.h */,
-				C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */,
 				C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */,
 			);
 			path = NSURLProtocol;
@@ -645,8 +645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dbf2da26-dff7-469f-b413-584944b49abc";
-				PROVISIONING_PROFILE_SPECIFIER = vipvideo_Dev;
+				PROVISIONING_PROFILE = "4169b125-e44b-4aca-a87c-6fc6ed81ea1f";
+				PROVISIONING_PROFILE_SPECIFIER = Common_lhl_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
