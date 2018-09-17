@@ -120,7 +120,9 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
                 });
             };
             
-            [[UIViewController topkeyWindowViewController] presentViewController:playerVC animated:YES completion:nil];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIViewController topkeyWindowViewController] presentViewController:playerVC animated:YES completion:nil];
+            });
             
             mutableReqeust = nil;
         }
