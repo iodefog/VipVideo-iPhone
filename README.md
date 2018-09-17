@@ -8,7 +8,14 @@
 
 ## VipVideo For Mac 地址 
 
-[https://github.com/iodefog/VipVideo](https://github.com/iodefog/VipVideo.git)
+Git 地址：
+
+[https://github.com/iodefog/VipVideo.git](https://github.com/iodefog/VipVideo.git)
+
+
+dmg地址：
+
+[https://iodefog.github.io/dmg/MVideo.dmg](https://iodefog.github.io/dmg/MVideo.dmg)
 
 ---
 
@@ -60,6 +67,18 @@
 
 ---
 
+## IPA地址
+
+需要自己重签名才能安装
+
+[https://iodefog.github.io/dmg/VipVideo-iPhone.zip](https://iodefog.github.io/dmg/VipVideo-iPhone.zip)
+
+
+重签名教程
+[https://iodefog.github.io/2016/08/24/iosipa/](https://iodefog.github.io/2016/08/24/iosipa/)
+
+---
+
 ## 软件截图介绍
 
 1、 主页
@@ -78,3 +97,22 @@
 
 ![](./images/player.png)
 
+
+
+
+
+
+---
+
+* 应大家的要求，放出源码，仅供交流使用。
+* 这里仅仅给出源码，接口已经移除。有需要的请自行配置url路径。
+* 如果有需要我这边出接口的，请适当给一些赞助。赞助后，定期下发给vip转换url或者dmg。
+
+
+![](./images/erweima.png)
+
+----
+
+如需联系或者合作，请发送邮件 [iodefog@gmail.com](mailto:iodefog@gmail.com)
+
+QQ群：567503018
