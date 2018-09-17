@@ -21,6 +21,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.title = @"我的";
+    
     UILabel *uaLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     uaLabel.font = [UIFont systemFontOfSize:15];
     uaLabel.textColor = [UIColor blackColor];

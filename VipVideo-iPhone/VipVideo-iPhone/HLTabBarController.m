@@ -26,9 +26,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoIphoneUAChange) name:HLVideoIphoneUAChange object:nil];
 
     UINavigationController *home = [self createVCWithTitle:@"首页" icon:@"home" className:@"HLHomeViewController"];
-    UINavigationController *live = [self createVCWithTitle:@"直播" icon:@"live" className:@"HLTVListViewController"];
+    UINavigationController *live = [self createVCWithTitle:@"直播" icon:@"live" className:@"HLTVHomeViewController"];
     UINavigationController *download = [self createVCWithTitle:@"下载" icon:@"download" className:@"DownloadViewController"];
-    UINavigationController *mine = [self createVCWithTitle:@"首页" icon:@"mine" className:@"HLMineViewController"];
+    UINavigationController *mine = [self createVCWithTitle:@"我的" icon:@"mine" className:@"HLMineViewController"];
 
     self.viewControllers = @[home, live, download, mine];
 }
