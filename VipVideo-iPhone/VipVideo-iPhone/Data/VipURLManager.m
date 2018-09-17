@@ -12,7 +12,7 @@
 
 #warning 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
 
-#define OnlineVipUrl @"xxx/mviplist.json"
+#define OnlineVipUrl @"https://iodefog.github.io/text/mviplist.json"
 
 @implementation VipUrlItem
 

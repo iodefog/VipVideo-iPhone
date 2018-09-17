@@ -14,16 +14,6 @@
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
 		C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */; };
 		C70B57AA2112AC200024D60B /* NSURLProtocol+UIWebVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */; };
-		C70B57AE2112AC590024D60B /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57AC2112AC590024D60B /* HLHomeViewController.m */; };
-		C70B57BB2112AEFA0024D60B /* HLTVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */; };
-		C70B57BC2112AEFA0024D60B /* HLTVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */; };
-		C70B57C42112AF1C0024D60B /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57BF2112AF1C0024D60B /* MMovieModel.m */; };
-		C70B57C52112AF1C0024D60B /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57C32112AF1C0024D60B /* ListTableViewCell.m */; };
-		C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */; };
-		C70C3CD420C920E000BC52E3 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */; };
-		C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD020C920E000BC52E3 /* WMLightView.m */; };
-		C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD120C920E000BC52E3 /* FastForwardView.m */; };
-		C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C70C3CD220C920E000BC52E3 /* WMPlayer.m */; };
 		C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */; };
 		C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A951FA174D3000684F1 /* AppDelegate.m */; };
 		C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9A1FA174D3000684F1 /* Main.storyboard */; };
@@ -33,11 +23,28 @@
 		C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */ = {isa = PBXBuildFile; fileRef = C7240ABB1FA17EB7000684F1 /* mviplist.json */; };
 		C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; };
 		C72675C820E08A2A00D1F92E /* HLDownload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */; };
-		C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB3E2029A33C003C058B /* DownloadViewController.m */; };
-		C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB412029A33C003C058B /* FinishedViewController.m */; };
-		C7F1AB492029A33C003C058B /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB442029A33C003C058B /* DownLoadCell.m */; };
-		C7F1AB4A2029A33C003C058B /* AppDelegate+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1AB452029A33C003C058B /* AppDelegate+Download.m */; };
+		C72EE444214F460B00288C1C /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE442214F460B00288C1C /* home@2x.png */; };
+		C72EE445214F460B00288C1C /* live@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE443214F460B00288C1C /* live@2x.png */; };
+		C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE446214F4BEE00288C1C /* platlist@2x.png */; };
+		C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE447214F4BEE00288C1C /* VIP@2x.png */; };
+		C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE44A214F51BC00288C1C /* mine@2x.png */; };
+		C72EE472214F51ED00288C1C /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE44E214F51ED00288C1C /* HLHomeViewController.m */; };
+		C72EE473214F51ED00288C1C /* WMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE451214F51ED00288C1C /* WMPlayerModel.m */; };
+		C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C72EE452214F51ED00288C1C /* WMPlayer.bundle */; };
+		C72EE475214F51ED00288C1C /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE458214F51ED00288C1C /* WMLightView.m */; };
+		C72EE476214F51ED00288C1C /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE459214F51ED00288C1C /* FastForwardView.m */; };
+		C72EE477214F51ED00288C1C /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE45A214F51ED00288C1C /* WMPlayer.m */; };
+		C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE45C214F51ED00288C1C /* QSPDownloadTool.m */; };
+		C72EE479214F51ED00288C1C /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE45E214F51ED00288C1C /* DownloadViewController.m */; };
+		C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE461214F51ED00288C1C /* FinishedViewController.m */; };
+		C72EE47B214F51ED00288C1C /* DownLoadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE464214F51ED00288C1C /* DownLoadCell.m */; };
+		C72EE47C214F51ED00288C1C /* AppDelegate+Download.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE465214F51ED00288C1C /* AppDelegate+Download.m */; };
+		C72EE47D214F51ED00288C1C /* HLTVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE467214F51ED00288C1C /* HLTVHomeViewController.m */; };
+		C72EE47E214F51ED00288C1C /* HLTVListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE468214F51ED00288C1C /* HLTVListViewController.m */; };
+		C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE46B214F51ED00288C1C /* MMovieModel.m */; };
+		C72EE480214F51ED00288C1C /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE46F214F51ED00288C1C /* ListTableViewCell.m */; };
+		C72EE487214F530000288C1C /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE486214F530000288C1C /* HLMineViewController.m */; };
+		C72EE489214F588D00288C1C /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE488214F588D00288C1C /* download@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,25 +94,6 @@
 		C70B57A32112AC200024D60B /* HybridNSURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridNSURLProtocol.h; sourceTree = "<group>"; };
 		C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WKWebVIew.h"; sourceTree = "<group>"; };
 		C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+UIWebVIew.h"; sourceTree = "<group>"; };
-		C70B57AC2112AC590024D60B /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
-		C70B57AD2112AC590024D60B /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
-		C70B57B72112AEF90024D60B /* HLTVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVHomeViewController.h; sourceTree = "<group>"; };
-		C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVHomeViewController.m; sourceTree = "<group>"; };
-		C70B57B92112AEF90024D60B /* HLTVListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVListViewController.h; sourceTree = "<group>"; };
-		C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVListViewController.m; sourceTree = "<group>"; };
-		C70B57BE2112AF1C0024D60B /* MMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMovieModel.h; sourceTree = "<group>"; };
-		C70B57BF2112AF1C0024D60B /* MMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMovieModel.m; sourceTree = "<group>"; };
-		C70B57C22112AF1C0024D60B /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
-		C70B57C32112AF1C0024D60B /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
-		C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayerModel.m; sourceTree = "<group>"; };
-		C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
-		C70C3CCB20C920E000BC52E3 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
-		C70C3CCC20C920E000BC52E3 /* WMPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayerModel.h; sourceTree = "<group>"; };
-		C70C3CCE20C920E000BC52E3 /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
-		C70C3CCF20C920E000BC52E3 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
-		C70C3CD020C920E000BC52E3 /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
-		C70C3CD120C920E000BC52E3 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
-		C70C3CD220C920E000BC52E3 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerViewController.h; sourceTree = "<group>"; };
 		C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerViewController.m; sourceTree = "<group>"; };
 		C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VipVideo-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,16 +106,44 @@
 		C7240AA31FA174D3000684F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C7240ABB1FA17EB7000684F1 /* mviplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mviplist.json; sourceTree = "<group>"; };
 		C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HLDownload.xcodeproj; path = HLDownload/HLDownload.xcodeproj; sourceTree = "<group>"; };
-		C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPDownloadTool.m; sourceTree = "<group>"; };
-		C7F1AB3D2029A33C003C058B /* FinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedViewController.h; sourceTree = "<group>"; };
-		C7F1AB3E2029A33C003C058B /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
-		C7F1AB3F2029A33C003C058B /* DownLoadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
-		C7F1AB402029A33C003C058B /* AppDelegate+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Download.h"; sourceTree = "<group>"; };
-		C7F1AB412029A33C003C058B /* FinishedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedViewController.m; sourceTree = "<group>"; };
-		C7F1AB422029A33C003C058B /* QSPDownloadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPDownloadTool.h; sourceTree = "<group>"; };
-		C7F1AB432029A33C003C058B /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
-		C7F1AB442029A33C003C058B /* DownLoadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
-		C7F1AB452029A33C003C058B /* AppDelegate+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Download.m"; sourceTree = "<group>"; };
+		C72EE442214F460B00288C1C /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		C72EE443214F460B00288C1C /* live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live@2x.png"; sourceTree = "<group>"; };
+		C72EE446214F4BEE00288C1C /* platlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "platlist@2x.png"; sourceTree = "<group>"; };
+		C72EE447214F4BEE00288C1C /* VIP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VIP@2x.png"; sourceTree = "<group>"; };
+		C72EE44A214F51BC00288C1C /* mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine@2x.png"; sourceTree = "<group>"; };
+		C72EE44E214F51ED00288C1C /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		C72EE44F214F51ED00288C1C /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		C72EE451214F51ED00288C1C /* WMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayerModel.m; sourceTree = "<group>"; };
+		C72EE452214F51ED00288C1C /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		C72EE453214F51ED00288C1C /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		C72EE454214F51ED00288C1C /* WMPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayerModel.h; sourceTree = "<group>"; };
+		C72EE456214F51ED00288C1C /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
+		C72EE457214F51ED00288C1C /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
+		C72EE458214F51ED00288C1C /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
+		C72EE459214F51ED00288C1C /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
+		C72EE45A214F51ED00288C1C /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		C72EE45C214F51ED00288C1C /* QSPDownloadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPDownloadTool.m; sourceTree = "<group>"; };
+		C72EE45D214F51ED00288C1C /* FinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedViewController.h; sourceTree = "<group>"; };
+		C72EE45E214F51ED00288C1C /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		C72EE45F214F51ED00288C1C /* DownLoadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownLoadCell.h; sourceTree = "<group>"; };
+		C72EE460214F51ED00288C1C /* AppDelegate+Download.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Download.h"; sourceTree = "<group>"; };
+		C72EE461214F51ED00288C1C /* FinishedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedViewController.m; sourceTree = "<group>"; };
+		C72EE462214F51ED00288C1C /* QSPDownloadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPDownloadTool.h; sourceTree = "<group>"; };
+		C72EE463214F51ED00288C1C /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		C72EE464214F51ED00288C1C /* DownLoadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownLoadCell.m; sourceTree = "<group>"; };
+		C72EE465214F51ED00288C1C /* AppDelegate+Download.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Download.m"; sourceTree = "<group>"; };
+		C72EE467214F51ED00288C1C /* HLTVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVHomeViewController.m; sourceTree = "<group>"; };
+		C72EE468214F51ED00288C1C /* HLTVListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTVListViewController.m; sourceTree = "<group>"; };
+		C72EE46A214F51ED00288C1C /* MMovieModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMovieModel.h; sourceTree = "<group>"; };
+		C72EE46B214F51ED00288C1C /* MMovieModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMovieModel.m; sourceTree = "<group>"; };
+		C72EE46E214F51ED00288C1C /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		C72EE46F214F51ED00288C1C /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		C72EE470214F51ED00288C1C /* HLTVListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVListViewController.h; sourceTree = "<group>"; };
+		C72EE471214F51ED00288C1C /* HLTVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTVHomeViewController.h; sourceTree = "<group>"; };
+		C72EE485214F530000288C1C /* HLMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLMineViewController.h; sourceTree = "<group>"; };
+		C72EE486214F530000288C1C /* HLMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLMineViewController.m; sourceTree = "<group>"; };
+		C72EE488214F588D00288C1C /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
+		C72EE48C214F5D0900288C1C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = "VipVideo-iPhone/PrefixHeader.pch"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +179,10 @@
 		C70B579A2112AC200024D60B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C70B579B2112AC200024D60B /* VipURLManager.h */,
-				C70B579C2112AC200024D60B /* JSONKit.m */,
-				C70B579D2112AC200024D60B /* VipURLManager.m */,
 				C70B579E2112AC200024D60B /* JSONKit.h */,
+				C70B579C2112AC200024D60B /* JSONKit.m */,
+				C70B579B2112AC200024D60B /* VipURLManager.h */,
+				C70B579D2112AC200024D60B /* VipURLManager.m */,
 				C70B579F2112AC200024D60B /* NSURLProtocol */,
 			);
 			path = Data;
@@ -175,41 +191,20 @@
 		C70B579F2112AC200024D60B /* NSURLProtocol */ = {
 			isa = PBXGroup;
 			children = (
-				C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */,
-				C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */,
 				C70B57A42112AC200024D60B /* NSURLProtocol+WKWebVIew.h */,
+				C70B57A12112AC200024D60B /* NSURLProtocol+WKWebVIew.m */,
+				C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */,
 				C70B57A22112AC200024D60B /* NSURLProtocol+UIWebVIew.m */,
 				C70B57A32112AC200024D60B /* HybridNSURLProtocol.h */,
-				C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */,
+				C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */,
 			);
 			path = NSURLProtocol;
-			sourceTree = "<group>";
-		};
-		C70B57AB2112AC590024D60B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				C70B57AC2112AC590024D60B /* HLHomeViewController.m */,
-				C70B57AD2112AC590024D60B /* HLHomeViewController.h */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		C70B57B22112AC950024D60B /* TV */ = {
-			isa = PBXGroup;
-			children = (
-				C70B57B72112AEF90024D60B /* HLTVHomeViewController.h */,
-				C70B57B82112AEF90024D60B /* HLTVHomeViewController.m */,
-				C70B57B92112AEF90024D60B /* HLTVListViewController.h */,
-				C70B57BA2112AEFA0024D60B /* HLTVListViewController.m */,
-				C70B57BD2112AF1C0024D60B /* Model */,
-				C70B57C12112AF1C0024D60B /* View */,
-			);
-			path = TV;
 			sourceTree = "<group>";
 		};
 		C70B57B62112ACA50024D60B /* Support File */ = {
 			isa = PBXGroup;
 			children = (
+				C72EE48C214F5D0900288C1C /* PrefixHeader.pch */,
 				C7240A9A1FA174D3000684F1 /* Main.storyboard */,
 				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
@@ -218,56 +213,6 @@
 				C7240AA31FA174D3000684F1 /* main.m */,
 			);
 			path = "Support File";
-			sourceTree = "<group>";
-		};
-		C70B57BD2112AF1C0024D60B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C70B57BE2112AF1C0024D60B /* MMovieModel.h */,
-				C70B57BF2112AF1C0024D60B /* MMovieModel.m */,
-				C70B57C02112AF1C0024D60B /* AdvancedBarrage */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C70B57C02112AF1C0024D60B /* AdvancedBarrage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AdvancedBarrage;
-			sourceTree = "<group>";
-		};
-		C70B57C12112AF1C0024D60B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C70B57C22112AF1C0024D60B /* ListTableViewCell.h */,
-				C70B57C32112AF1C0024D60B /* ListTableViewCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C70C3CC820C920E000BC52E3 /* WMPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				C70C3CC920C920E000BC52E3 /* WMPlayerModel.m */,
-				C70C3CCA20C920E000BC52E3 /* WMPlayer.bundle */,
-				C70C3CCB20C920E000BC52E3 /* WMPlayer.h */,
-				C70C3CCC20C920E000BC52E3 /* WMPlayerModel.h */,
-				C70C3CCD20C920E000BC52E3 /* View */,
-				C70C3CD220C920E000BC52E3 /* WMPlayer.m */,
-			);
-			path = WMPlayer;
-			sourceTree = "<group>";
-		};
-		C70C3CCD20C920E000BC52E3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C70C3CCE20C920E000BC52E3 /* WMLightView.h */,
-				C70C3CCF20C920E000BC52E3 /* FastForwardView.h */,
-				C70C3CD020C920E000BC52E3 /* WMLightView.m */,
-				C70C3CD120C920E000BC52E3 /* FastForwardView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C7240A881FA174D3000684F1 = {
@@ -298,11 +243,9 @@
 				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
 				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
 				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
-				C70B57B22112AC950024D60B /* TV */,
-				C70B57AB2112AC590024D60B /* Home */,
+				C72EE44C214F51ED00288C1C /* Class */,
+				C72EE441214F460B00288C1C /* Resources */,
 				C70B579A2112AC200024D60B /* Data */,
-				C70C3CC820C920E000BC52E3 /* WMPlayer */,
-				C7F1AB3B2029A33C003C058B /* QSPDownload */,
 				C70B57B62112ACA50024D60B /* Support File */,
 			);
 			path = "VipVideo-iPhone";
@@ -316,21 +259,127 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C7F1AB3B2029A33C003C058B /* QSPDownload */ = {
+		C72EE441214F460B00288C1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C7F1AB432029A33C003C058B /* DownloadViewController.h */,
-				C7F1AB3E2029A33C003C058B /* DownloadViewController.m */,
-				C7F1AB3D2029A33C003C058B /* FinishedViewController.h */,
-				C7F1AB412029A33C003C058B /* FinishedViewController.m */,
-				C7F1AB3F2029A33C003C058B /* DownLoadCell.h */,
-				C7F1AB442029A33C003C058B /* DownLoadCell.m */,
-				C7F1AB422029A33C003C058B /* QSPDownloadTool.h */,
-				C7F1AB3C2029A33C003C058B /* QSPDownloadTool.m */,
-				C7F1AB402029A33C003C058B /* AppDelegate+Download.h */,
-				C7F1AB452029A33C003C058B /* AppDelegate+Download.m */,
+				C72EE488214F588D00288C1C /* download@2x.png */,
+				C72EE446214F4BEE00288C1C /* platlist@2x.png */,
+				C72EE447214F4BEE00288C1C /* VIP@2x.png */,
+				C72EE442214F460B00288C1C /* home@2x.png */,
+				C72EE443214F460B00288C1C /* live@2x.png */,
+				C72EE44A214F51BC00288C1C /* mine@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C72EE44C214F51ED00288C1C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE481214F520200288C1C /* Mine */,
+				C72EE44D214F51ED00288C1C /* Home */,
+				C72EE450214F51ED00288C1C /* WMPlayer */,
+				C72EE45B214F51ED00288C1C /* QSPDownload */,
+				C72EE466214F51ED00288C1C /* TV */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		C72EE44D214F51ED00288C1C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE44E214F51ED00288C1C /* HLHomeViewController.m */,
+				C72EE44F214F51ED00288C1C /* HLHomeViewController.h */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C72EE450214F51ED00288C1C /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE451214F51ED00288C1C /* WMPlayerModel.m */,
+				C72EE452214F51ED00288C1C /* WMPlayer.bundle */,
+				C72EE453214F51ED00288C1C /* WMPlayer.h */,
+				C72EE454214F51ED00288C1C /* WMPlayerModel.h */,
+				C72EE455214F51ED00288C1C /* View */,
+				C72EE45A214F51ED00288C1C /* WMPlayer.m */,
+			);
+			path = WMPlayer;
+			sourceTree = "<group>";
+		};
+		C72EE455214F51ED00288C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE456214F51ED00288C1C /* WMLightView.h */,
+				C72EE457214F51ED00288C1C /* FastForwardView.h */,
+				C72EE458214F51ED00288C1C /* WMLightView.m */,
+				C72EE459214F51ED00288C1C /* FastForwardView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C72EE45B214F51ED00288C1C /* QSPDownload */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE45C214F51ED00288C1C /* QSPDownloadTool.m */,
+				C72EE45D214F51ED00288C1C /* FinishedViewController.h */,
+				C72EE45E214F51ED00288C1C /* DownloadViewController.m */,
+				C72EE45F214F51ED00288C1C /* DownLoadCell.h */,
+				C72EE460214F51ED00288C1C /* AppDelegate+Download.h */,
+				C72EE461214F51ED00288C1C /* FinishedViewController.m */,
+				C72EE462214F51ED00288C1C /* QSPDownloadTool.h */,
+				C72EE463214F51ED00288C1C /* DownloadViewController.h */,
+				C72EE464214F51ED00288C1C /* DownLoadCell.m */,
+				C72EE465214F51ED00288C1C /* AppDelegate+Download.m */,
 			);
 			path = QSPDownload;
+			sourceTree = "<group>";
+		};
+		C72EE466214F51ED00288C1C /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE467214F51ED00288C1C /* HLTVHomeViewController.m */,
+				C72EE468214F51ED00288C1C /* HLTVListViewController.m */,
+				C72EE469214F51ED00288C1C /* Model */,
+				C72EE46D214F51ED00288C1C /* View */,
+				C72EE470214F51ED00288C1C /* HLTVListViewController.h */,
+				C72EE471214F51ED00288C1C /* HLTVHomeViewController.h */,
+			);
+			path = TV;
+			sourceTree = "<group>";
+		};
+		C72EE469214F51ED00288C1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE46A214F51ED00288C1C /* MMovieModel.h */,
+				C72EE46B214F51ED00288C1C /* MMovieModel.m */,
+				C72EE46C214F51ED00288C1C /* AdvancedBarrage */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C72EE46C214F51ED00288C1C /* AdvancedBarrage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AdvancedBarrage;
+			sourceTree = "<group>";
+		};
+		C72EE46D214F51ED00288C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE46E214F51ED00288C1C /* ListTableViewCell.h */,
+				C72EE46F214F51ED00288C1C /* ListTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C72EE481214F520200288C1C /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				C72EE485214F530000288C1C /* HLMineViewController.h */,
+				C72EE486214F530000288C1C /* HLMineViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,10 +461,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
+				C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */,
+				C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */,
 				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
-				C70C3CD420C920E000BC52E3 /* WMPlayer.bundle in Resources */,
+				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
 				C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */,
+				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
+				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
+				C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */,
+				C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,28 +525,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70B57AA2112AC200024D60B /* NSURLProtocol+UIWebVIew.m in Sources */,
-				C70C3CD320C920E000BC52E3 /* WMPlayerModel.m in Sources */,
-				C70B57BC2112AEFA0024D60B /* HLTVListViewController.m in Sources */,
+				C72EE47C214F51ED00288C1C /* AppDelegate+Download.m in Sources */,
+				C72EE47B214F51ED00288C1C /* DownLoadCell.m in Sources */,
+				C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */,
+				C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */,
 				C70B57A72112AC200024D60B /* VipURLManager.m in Sources */,
-				C7F1AB4A2029A33C003C058B /* AppDelegate+Download.m in Sources */,
-				C7F1AB462029A33C003C058B /* QSPDownloadTool.m in Sources */,
-				C70B57C42112AF1C0024D60B /* MMovieModel.m in Sources */,
-				C7F1AB472029A33C003C058B /* DownloadViewController.m in Sources */,
+				C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */,
 				C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */,
+				C72EE475214F51ED00288C1C /* WMLightView.m in Sources */,
+				C72EE472214F51ED00288C1C /* HLHomeViewController.m in Sources */,
+				C72EE47D214F51ED00288C1C /* HLTVHomeViewController.m in Sources */,
 				C7240AA41FA174D3000684F1 /* main.m in Sources */,
-				C70B57BB2112AEFA0024D60B /* HLTVHomeViewController.m in Sources */,
+				C72EE480214F51ED00288C1C /* ListTableViewCell.m in Sources */,
+				C72EE473214F51ED00288C1C /* WMPlayerModel.m in Sources */,
 				C70B57A62112AC200024D60B /* JSONKit.m in Sources */,
-				C70B57C52112AF1C0024D60B /* ListTableViewCell.m in Sources */,
 				C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */,
+				C72EE479214F51ED00288C1C /* DownloadViewController.m in Sources */,
+				C72EE47E214F51ED00288C1C /* HLTVListViewController.m in Sources */,
+				C72EE476214F51ED00288C1C /* FastForwardView.m in Sources */,
+				C72EE477214F51ED00288C1C /* WMPlayer.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
+				C72EE487214F530000288C1C /* HLMineViewController.m in Sources */,
 				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,
-				C70B57AE2112AC590024D60B /* HLHomeViewController.m in Sources */,
 				4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */,
-				C70C3CD620C920E000BC52E3 /* FastForwardView.m in Sources */,
-				C7F1AB492029A33C003C058B /* DownLoadCell.m in Sources */,
-				C70C3CD720C920E000BC52E3 /* WMPlayer.m in Sources */,
-				C70C3CD520C920E000BC52E3 /* WMLightView.m in Sources */,
-				C7F1AB482029A33C003C058B /* FinishedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +697,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M675EFBDE2;
+				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
@@ -648,6 +705,7 @@
 				PROVISIONING_PROFILE = "4169b125-e44b-4aca-a87c-6fc6ed81ea1f";
 				PROVISIONING_PROFILE_SPECIFIER = Common_lhl_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -660,6 +718,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = M675EFBDE2;
+				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
@@ -667,6 +726,7 @@
 				PROVISIONING_PROFILE = "7e347f5b-4673-4593-bcfc-b65051128cdc";
 				PROVISIONING_PROFILE_SPECIFIER = vipvideo_Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

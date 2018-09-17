@@ -122,10 +122,7 @@
 }
 
 + (UIViewController *)topkeyWindowViewController {
-   __block UIViewController *topViewController = nil;
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        topViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    });
+    UIViewController *topViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     
     UITabBarController *tabBarController = [topViewController as:[UITabBarController class]];
     if (tabBarController.selectedViewController) {

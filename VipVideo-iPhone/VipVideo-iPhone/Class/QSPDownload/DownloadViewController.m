@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"下载任务管理";
+    self.title = @"下载";
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:@"已完成" forState:UIControlStateNormal];

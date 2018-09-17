@@ -12,6 +12,7 @@
 #import "NSURLProtocol+WKWebVIew.h"
 #import <Bugly/Bugly.h>
 
+
 @interface AppDelegate ()
 
 @end
@@ -25,6 +26,11 @@
     [NSURLProtocol wk_registerScheme:@"http"];
     [NSURLProtocol wk_registerScheme:@"https"];
 
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:HLVideoIphoneUAisOn];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"UserAgent": HLiPhoneUA}];
+
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [Bugly startWithAppId:@"c436559ac2"];
     
     [VipURLManager sharedInstance];

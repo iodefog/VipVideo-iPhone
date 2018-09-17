@@ -16,8 +16,6 @@
 #import "Masonry.h"
 #import "HybridNSURLProtocol.h"
 
-#define HLUserAgent @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-#define HLiPhoneUA @"Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25"
 
 @interface HLHomeViewController ()<UIGestureRecognizerDelegate>
 
@@ -45,7 +43,8 @@
     
     if (!_leftButton) {
         UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
+        [leftButton setImage:[UIImage imageNamed:@"platlist"] forState:UIControlStateNormal];
+//        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
         leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
         [leftButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
         leftButton.frame = CGRectMake(0, 0, 30, 44);
@@ -55,7 +54,8 @@
     
     if (!self.rightButton) {
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [rightButton setTitle:@"转换" forState:UIControlStateNormal];
+//        [rightButton setTitle:@"转换" forState:UIControlStateNormal];
+        [rightButton setImage:[UIImage imageNamed:@"VIP"] forState:UIControlStateNormal];
         rightButton.titleLabel.font = [UIFont systemFontOfSize:14];
         rightButton.frame = CGRectMake(0, 0, 30, 44);
         [rightButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
@@ -122,7 +122,7 @@
 
 - (void)configurationWebVC{
     
-    self.showsToolBar = YES;
+    self.showsToolBar = NO;
     self.navigationType = AXWebViewControllerNavigationToolItem;
     self.maxAllowedTitleLength = 999;
     
@@ -135,7 +135,6 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
     {
         configuration.menuWidth = 200;
-//        [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"UserAgent": HLUserAgent}];
         self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
         [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view);
