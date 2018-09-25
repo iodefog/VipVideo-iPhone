@@ -30,7 +30,7 @@
 @implementation QSPDownloadSource
 - (NSFileHandle *)fileHandle
 {
-    if (_fileHandle == nil) {
+    if (_fileHandle == nil && (self.location != nil)) {
         NSURL *url = [NSURL fileURLWithPath:self.location];
         NSLog(@"-----------%@", self.location);
         _fileHandle = url ? [NSFileHandle fileHandleForWritingToURL:url error:nil] : nil;

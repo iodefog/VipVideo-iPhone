@@ -74,6 +74,9 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
     }
     
     NSString *requestUrl = request.URL.absoluteString;
+    
+    NSLog(@"requestUrl = %@",requestUrl);
+
     // 拦截广告
     if ([requestUrl containsString:@"img.09mk.cn"]
         ||[requestUrl containsString:@"img.xiaohui2.cn"]
@@ -128,7 +131,7 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
         }
     }
     else {
-        NSLog(@"requestUrl = %@",requestUrl);
+
     }
     
     return mutableReqeust;

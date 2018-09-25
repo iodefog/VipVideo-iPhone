@@ -287,8 +287,8 @@
 		C72EE44D214F51ED00288C1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C72EE44E214F51ED00288C1C /* HLHomeViewController.m */,
 				C72EE44F214F51ED00288C1C /* HLHomeViewController.h */,
+				C72EE44E214F51ED00288C1C /* HLHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
