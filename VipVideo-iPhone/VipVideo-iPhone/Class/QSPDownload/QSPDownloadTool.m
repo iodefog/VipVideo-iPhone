@@ -496,9 +496,9 @@ static QSPDownloadTool *_shareInstance;
     [source.fileHandle closeFile];
     source.fileHandle = nil;
     NSError *error = nil;
-    if ([source.location containsString:@".m3u8"]) {
+    if ([source.location containsString:@".m3u8"] && (source.location.stringByDeletingLastPathComponent.length > 0)) {
         [[NSFileManager defaultManager] removeItemAtURL:[NSURL fileURLWithPath:source.location.stringByDeletingLastPathComponent] error:&error];
-    }else {
+    }else if(source.location) {
         [[NSFileManager defaultManager] removeItemAtURL:[NSURL fileURLWithPath:source.location] error:&error];
     }
     if (error) {
