@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
 		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
+		4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */; };
+		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -83,6 +85,9 @@
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
 		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
 		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
+		4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
+		4FB74BA921CE85AC00F52070 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
+		4FB74BAB21CE868A00F52070 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -176,6 +181,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4FB74BA721CE85AC00F52070 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */,
+				4FB74BA921CE85AC00F52070 /* UIButton+Addition.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		C70B579A2112AC200024D60B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,15 +251,17 @@
 		C7240A931FA174D3000684F1 /* VipVideo-iPhone */ = {
 			isa = PBXGroup;
 			children = (
+				4FB74BAB21CE868A00F52070 /* README.md */,
 				C7240A941FA174D3000684F1 /* AppDelegate.h */,
 				C7240A951FA174D3000684F1 /* AppDelegate.m */,
-				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
-				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
 				C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */,
 				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
+				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
+				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
 				C72EE44C214F51ED00288C1C /* Class */,
-				C72EE441214F460B00288C1C /* Resources */,
 				C70B579A2112AC200024D60B /* Data */,
+				4FB74BA721CE85AC00F52070 /* Other */,
+				C72EE441214F460B00288C1C /* Resources */,
 				C70B57B62112ACA50024D60B /* Support File */,
 			);
 			path = "VipVideo-iPhone";
@@ -296,12 +312,12 @@
 		C72EE450214F51ED00288C1C /* WMPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				C72EE451214F51ED00288C1C /* WMPlayerModel.m */,
+				C72EE455214F51ED00288C1C /* View */,
 				C72EE452214F51ED00288C1C /* WMPlayer.bundle */,
 				C72EE453214F51ED00288C1C /* WMPlayer.h */,
-				C72EE454214F51ED00288C1C /* WMPlayerModel.h */,
-				C72EE455214F51ED00288C1C /* View */,
 				C72EE45A214F51ED00288C1C /* WMPlayer.m */,
+				C72EE454214F51ED00288C1C /* WMPlayerModel.h */,
+				C72EE451214F51ED00288C1C /* WMPlayerModel.m */,
 			);
 			path = WMPlayer;
 			sourceTree = "<group>";
@@ -309,10 +325,10 @@
 		C72EE455214F51ED00288C1C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C72EE456214F51ED00288C1C /* WMLightView.h */,
 				C72EE457214F51ED00288C1C /* FastForwardView.h */,
-				C72EE458214F51ED00288C1C /* WMLightView.m */,
 				C72EE459214F51ED00288C1C /* FastForwardView.m */,
+				C72EE456214F51ED00288C1C /* WMLightView.h */,
+				C72EE458214F51ED00288C1C /* WMLightView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +482,7 @@
 				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
 				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
+				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
 				C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */,
 				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
@@ -528,6 +545,7 @@
 				C72EE47C214F51ED00288C1C /* AppDelegate+Download.m in Sources */,
 				C72EE47B214F51ED00288C1C /* DownLoadCell.m in Sources */,
 				C72EE47A214F51ED00288C1C /* FinishedViewController.m in Sources */,
+				4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */,
 				C72EE478214F51ED00288C1C /* QSPDownloadTool.m in Sources */,
 				C70B57A72112AC200024D60B /* VipURLManager.m in Sources */,
 				C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */,

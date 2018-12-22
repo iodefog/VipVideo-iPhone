@@ -14,6 +14,7 @@
 
 #import "sys/utsname.h"
 #import "WMPlayer.h"
+#import "UIButton+Addition.h"
 
 //****************************宏*********************************
 #define WMPlayerSrcName(file) [@"WMPlayer.bundle" stringByAppendingPathComponent:file]
@@ -178,6 +179,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     //playOrPauseBtn
     self.playOrPauseBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.playOrPauseBtn.showsTouchWhenHighlighted = YES;
+    [self.playOrPauseBtn setEnlargeEdge:30];
     [self.playOrPauseBtn addTarget:self action:@selector(PlayOrPause:) forControlEvents:UIControlEventTouchUpInside];
     [self.playOrPauseBtn setImage:WMPlayerImage(@"player_ctrl_icon_pause") forState:UIControlStateNormal];
     [self.playOrPauseBtn setImage:WMPlayerImage(@"player_ctrl_icon_play") forState:UIControlStateSelected];
@@ -226,6 +228,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     //fullScreenBtn
     self.fullScreenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.fullScreenBtn.showsTouchWhenHighlighted = YES;
+    [self.fullScreenBtn setEnlargeEdge:30];
     [self.fullScreenBtn addTarget:self action:@selector(fullScreenAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.fullScreenBtn setImage:WMPlayerImage(@"player_icon_fullscreen") forState:UIControlStateNormal];
     [self.fullScreenBtn setImage:WMPlayerImage(@"player_icon_fullscreen") forState:UIControlStateSelected];
@@ -233,6 +236,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     
     //lockBtn
     self.lockBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.lockBtn setEnlargeEdge:30];
     self.lockBtn.showsTouchWhenHighlighted = YES;
     [self.lockBtn addTarget:self action:@selector(lockAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.lockBtn setImage:WMPlayerImage(@"player_icon_unlock") forState:UIControlStateNormal];
@@ -258,6 +262,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 
     //backBtn
     self.backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.backBtn setEnlargeEdge:30];
     self.backBtn.showsTouchWhenHighlighted = YES;
     [self.backBtn setImage:WMPlayerImage(@"close.png") forState:UIControlStateNormal];
     [self.backBtn setImage:WMPlayerImage(@"close.png") forState:UIControlStateSelected];
@@ -266,6 +271,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     
     //downloadBtn
     self.downloadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.downloadBtn setEnlargeEdge:30];
     self.downloadBtn.showsTouchWhenHighlighted = YES;
     [self.downloadBtn setImage:WMPlayerImage(@"download.png") forState:UIControlStateNormal];
     [self.downloadBtn setImage:WMPlayerImage(@"not-download.png") forState:UIControlStateDisabled];
@@ -334,7 +340,7 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     }];
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.bottom.equalTo(self.contentView);
-        make.height.mas_equalTo(50);
+        make.height.mas_equalTo(70);
     }];
     [self.lockBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.contentView).offset(15);

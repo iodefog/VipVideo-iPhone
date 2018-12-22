@@ -98,96 +98,6 @@
     NSLog(@"current url %@", self.url);
 }
 
-//
-///**
-// *  旋转屏幕通知
-// */
-//- (void)onDeviceOrientationChange:(NSNotification *)notification{
-//    if (self.wmPlayer==nil){
-//        return;
-//    }
-//    if (self.wmPlayer.isLockScreen){
-//        return;
-//    }
-//    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
-//    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)orientation;
-//    switch (interfaceOrientation) {
-//        case UIInterfaceOrientationPortraitUpsideDown:{
-//            NSLog(@"第3个旋转方向---电池栏在下");
-//        }
-//            break;
-//        case UIInterfaceOrientationPortrait:{
-//            NSLog(@"第0个旋转方向---电池栏在上");
-////            [self toOrientation:UIInterfaceOrientationPortrait];
-//        }
-//            break;
-//        case UIInterfaceOrientationLandscapeLeft:{
-//            NSLog(@"第2个旋转方向---电池栏在左");
-////            [self toOrientation:UIInterfaceOrientationLandscapeLeft];
-//        }
-//            break;
-//        case UIInterfaceOrientationLandscapeRight:{
-//            NSLog(@"第1个旋转方向---电池栏在右");
-////            [self toOrientation:UIInterfaceOrientationLandscapeRight];
-//        }
-//            break;
-//        default:
-//            break;
-//    }
-//}
-////点击进入,退出全屏,或者监测到屏幕旋转去调用的方法
-//-(void)toOrientation:(UIInterfaceOrientation)orientation{
-//    //获取到当前状态条的方向
-//    UIInterfaceOrientation currentOrientation = [UIApplication sharedApplication].statusBarOrientation;
-//    //判断如果当前方向和要旋转的方向一致,那么不做任何操作
-//    if (currentOrientation == orientation) {
-//        return;
-//    }
-//    [self.wmPlayer removeFromSuperview];
-//    
-//    //根据要旋转的方向,使用Masonry重新修改限制
-//    if (orientation ==UIInterfaceOrientationPortrait) {
-//        [self.view addSubview:self.wmPlayer];
-//        self.wmPlayer.isFullscreen = NO;
-//        self.wmPlayer.backBtnStyle = BackBtnStyleClose;
-//        [self.wmPlayer mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.left.right.top.bottom.equalTo(self.view);
-//        }];
-//        
-//    }else{
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [[UIApplication sharedApplication].keyWindow addSubview:self.wmPlayer];
-//            self.wmPlayer.isFullscreen = YES;
-//            self.wmPlayer.backBtnStyle = BackBtnStylePop;
-//            if(currentOrientation ==UIInterfaceOrientationPortrait){
-//                [self.wmPlayer mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                    make.width.mas_equalTo([UIScreen mainScreen].bounds.size.height);
-//                    make.height.mas_equalTo([UIScreen mainScreen].bounds.size.width);
-//                    make.center.equalTo([UIApplication sharedApplication].keyWindow);
-//                }];
-//            }else{
-//                [self.wmPlayer mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                    make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width);
-//                    make.height.mas_equalTo([UIScreen mainScreen].bounds.size.height);
-//                    make.center.equalTo([UIApplication sharedApplication].keyWindow);
-//                }];
-//            }
-//        });
-//    }
-//    
-//    //iOS6.0之后,设置状态条的方法能使用的前提是shouldAutorotate为NO,也就是说这个视图控制器内,旋转要关掉;
-//    //也就是说在实现这个方法的时候-(BOOL)shouldAutorotate返回值要为NO
-//    [[UIApplication sharedApplication] setStatusBarOrientation:orientation animated:NO];
-//    //更改了状态条的方向,但是设备方向UIInterfaceOrientation还是正方向的,这就要设置给你播放视频的视图的方向设置旋转
-//    //给你的播放视频的view视图设置旋转
-//    [UIView animateWithDuration:0.4 animations:^{
-//        self.wmPlayer.transform = CGAffineTransformIdentity;
-//        self.wmPlayer.transform = [WMPlayer getCurrentDeviceOrientation];
-//        [self.wmPlayer layoutIfNeeded];
-//        [self setNeedsStatusBarAppearanceUpdate];
-//    }];
-//}
-
 - (void)forceInterfaceOrientation:(UIInterfaceOrientation)orientation {
     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
         SEL selector             = NSSelectorFromString(@"setOrientation:");
@@ -283,6 +193,7 @@
     }else {
         [self forceInterfaceOrientation:UIInterfaceOrientationPortrait];
     }
+    wmplayer.isFullscreen = !wmplayer.isFullscreen;
 }
 
 
