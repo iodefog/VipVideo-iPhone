@@ -80,13 +80,10 @@
 #pragma mark -
 
 + (UIViewController *)rootViewController {
-    __block UIViewController *rootVC = nil;
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        rootVC = [[[UIApplication sharedApplication].windows firstObject] rootViewController];
-        if ([rootVC isKindOfClass:[UIAlertController class]]) {
-            rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
-        }
-    });
+    UIViewController *rootVC = [[[UIApplication sharedApplication].windows firstObject] rootViewController];
+    if ([rootVC isKindOfClass:[UIAlertController class]]) {
+        rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    }
     return rootVC;
 }
 

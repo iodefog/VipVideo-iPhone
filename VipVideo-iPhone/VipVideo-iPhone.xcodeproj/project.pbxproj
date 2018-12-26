@@ -336,16 +336,16 @@
 		C72EE45B214F51ED00288C1C /* QSPDownload */ = {
 			isa = PBXGroup;
 			children = (
-				C72EE45C214F51ED00288C1C /* QSPDownloadTool.m */,
-				C72EE45D214F51ED00288C1C /* FinishedViewController.h */,
-				C72EE45E214F51ED00288C1C /* DownloadViewController.m */,
-				C72EE45F214F51ED00288C1C /* DownLoadCell.h */,
 				C72EE460214F51ED00288C1C /* AppDelegate+Download.h */,
+				C72EE465214F51ED00288C1C /* AppDelegate+Download.m */,
+				C72EE45F214F51ED00288C1C /* DownLoadCell.h */,
+				C72EE464214F51ED00288C1C /* DownLoadCell.m */,
+				C72EE463214F51ED00288C1C /* DownloadViewController.h */,
+				C72EE45E214F51ED00288C1C /* DownloadViewController.m */,
+				C72EE45D214F51ED00288C1C /* FinishedViewController.h */,
 				C72EE461214F51ED00288C1C /* FinishedViewController.m */,
 				C72EE462214F51ED00288C1C /* QSPDownloadTool.h */,
-				C72EE463214F51ED00288C1C /* DownloadViewController.h */,
-				C72EE464214F51ED00288C1C /* DownLoadCell.m */,
-				C72EE465214F51ED00288C1C /* AppDelegate+Download.m */,
+				C72EE45C214F51ED00288C1C /* QSPDownloadTool.m */,
 			);
 			path = QSPDownload;
 			sourceTree = "<group>";
@@ -353,12 +353,12 @@
 		C72EE466214F51ED00288C1C /* TV */ = {
 			isa = PBXGroup;
 			children = (
+				C72EE471214F51ED00288C1C /* HLTVHomeViewController.h */,
 				C72EE467214F51ED00288C1C /* HLTVHomeViewController.m */,
+				C72EE470214F51ED00288C1C /* HLTVListViewController.h */,
 				C72EE468214F51ED00288C1C /* HLTVListViewController.m */,
 				C72EE469214F51ED00288C1C /* Model */,
 				C72EE46D214F51ED00288C1C /* View */,
-				C72EE470214F51ED00288C1C /* HLTVListViewController.h */,
-				C72EE471214F51ED00288C1C /* HLTVHomeViewController.h */,
 			);
 			path = TV;
 			sourceTree = "<group>";

@@ -14,4 +14,7 @@
 
 @property (strong, nonatomic) QSPDownloadSource *source;
 
+@property (strong, nonatomic) dispatch_block_t longBlock;
+
+
 @end

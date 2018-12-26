@@ -112,9 +112,22 @@
         [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:button];
         self.button = button;
+        
+        [self addLongGesture];
     }
     
     return self;
+}
+
+- (void)addLongGesture{
+    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGesture)];
+    [self addGestureRecognizer:longGesture];
+}
+
+- (void)longGesture{
+    if (self.longBlock) {
+        self.longBlock();
+    }
 }
 
 - (void)buttonClicked:(UIButton *)sender

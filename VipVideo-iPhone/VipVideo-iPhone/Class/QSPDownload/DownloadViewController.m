@@ -92,7 +92,21 @@
     if (cell == nil) {
         cell = [[DownLoadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
+
+    __weak NSIndexPath *weakIndexPath = indexPath;
+    __weak  typeof(self) weakSelf = self;
+    cell.longBlock = ^{
+        NSIndexPath *strongIndexPath = weakIndexPath;
+        __strong typeof(self) strongSelf = weakSelf;
+
+        QSPDownloadSource *source = strongSelf.dataArr[strongIndexPath.row];
+        
+        HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+        playerVC.url = [NSURL fileURLWithPath:source.netPath];
+        playerVC.canDownload = NO;
+        [strongSelf presentViewController:playerVC animated:YES completion:nil];
+    };
+
     cell.source = self.dataArr[indexPath.row];
     
     return cell;

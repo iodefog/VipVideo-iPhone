@@ -724,17 +724,8 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     [self.player play];
 }
 +(BOOL)IsiPhoneX{
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *platform = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
-    if([platform isEqualToString:@"i386"]||[platform isEqualToString:@"x86_64"]){//模拟器
-        return ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO);
-    }else{//真机
-        if([platform isEqualToString:@"iPhone10,3"]||[platform isEqualToString:@"iPhone10,6"]) {
-            return YES;
-        }
-        return NO;
-    }
+    BOOL isIphoneXBigger = (MAX(CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds)) > 812);
+    return isIphoneXBigger;
 }
 //是否全屏
 -(void)setIsFullscreen:(BOOL)isFullscreen{

@@ -11,6 +11,7 @@
 #import "HLPlayerViewController.h"
 #import "UIViewController+.h"
 #import <UIKit/UIKit.h>
+#import "VipURLManager.h"
 
 static NSString*const sourUrl  = @"https://m.baidu.com/static/index/plus/plus_logo.png";
 static NSString*const sourIconUrl  = @"http://m.baidu.com/static/search/baiduapp_icon.png";
@@ -92,7 +93,8 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
 //       ||[requestUrl.pathExtension hasPrefix:@"mp4"]
        )
     {
-        if (![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
+        if ([[[VipURLManager sharedInstance] currentVipApi] length] > 0 &&
+            ![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
             NSArray *urlArray = [requestUrl componentsSeparatedByString:@"url="];
             
             static bool isShow = NO;
