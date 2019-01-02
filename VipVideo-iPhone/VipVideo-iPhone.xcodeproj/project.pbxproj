@@ -22,7 +22,6 @@
 		C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9D1FA174D3000684F1 /* Assets.xcassets */; };
 		C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */; };
 		C7240AA41FA174D3000684F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AA31FA174D3000684F1 /* main.m */; };
-		C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */ = {isa = PBXBuildFile; fileRef = C7240ABB1FA17EB7000684F1 /* mviplist.json */; };
 		C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; };
 		C72675C820E08A2A00D1F92E /* HLDownload.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C72EE444214F460B00288C1C /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE442214F460B00288C1C /* home@2x.png */; };
@@ -109,7 +108,6 @@
 		C7240AA01FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7240AA21FA174D3000684F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7240AA31FA174D3000684F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C7240ABB1FA17EB7000684F1 /* mviplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mviplist.json; sourceTree = "<group>"; };
 		C72675C120E08A2100D1F92E /* HLDownload.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HLDownload.xcodeproj; path = HLDownload/HLDownload.xcodeproj; sourceTree = "<group>"; };
 		C72EE442214F460B00288C1C /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
 		C72EE443214F460B00288C1C /* live@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "live@2x.png"; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
-				C7240ABB1FA17EB7000684F1 /* mviplist.json */,
 				C7240AA31FA174D3000684F1 /* main.m */,
 			);
 			path = "Support File";
@@ -483,7 +480,6 @@
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
 				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
-				C7240ABC1FA17EB7000684F1 /* mviplist.json in Resources */,
 				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
 				C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */,
