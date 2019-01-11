@@ -73,7 +73,7 @@
     }
     NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    NSLog(@"%@,error %@",dict, error);
+//    NSLog(@"%@,error %@",dict, error);
     [self transformJsonToModel:dict[@"list"]];
     [self transformPlatformJsonToModel:dict[@"platformlist"]];
 }
@@ -89,7 +89,7 @@
                                                NSError * _Nullable connectionError) {
        if(!connectionError){
            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-           NSLog(@"%@",dict);
+//           NSLog(@"%@",dict);
            
            BOOL update = [dict[@"i_new_version_info"][@"i_update"] boolValue];
            NSString *updateMsg = dict[@"i_new_version_info"][@"i_updateMessage"];
@@ -118,19 +118,19 @@
                return;
            }
            
-           [self transformJsonToModel:dict[@"list"]];
-           [self transformPlatformJsonToModel:dict[@"platformlist"]];
-           NSDictionary *defaultDict = dict[@"default"];
-           [self.itemsArray enumerateObjectsUsingBlock:^(VipUrlItem *item, NSUInteger idx, BOOL * _Nonnull stop) {
-               if (item.url && [item.url isEqualToString:defaultDict[@"url"]]) {
-                   self->_currentVipApi = item.url;
-                   self->_currentIndex = [self.itemsArray indexOfObject:item];
-                   *stop = YES;
-               }
-           }];
-           
-           
-           [[NSNotificationCenter defaultCenter] postNotificationName:KHLVipVideoRequestSuccess object:nil];
+//           [self transformJsonToModel:dict[@"list"]];
+//           [self transformPlatformJsonToModel:dict[@"platformlist"]];
+//           NSDictionary *defaultDict = dict[@"default"];
+//           [self.itemsArray enumerateObjectsUsingBlock:^(VipUrlItem *item, NSUInteger idx, BOOL * _Nonnull stop) {
+//               if (item.url && [item.url isEqualToString:defaultDict[@"url"]]) {
+//                   self->_currentVipApi = item.url;
+//                   self->_currentIndex = [self.itemsArray indexOfObject:item];
+//                   *stop = YES;
+//               }
+//           }];
+//
+//
+//           [[NSNotificationCenter defaultCenter] postNotificationName:KHLVipVideoRequestSuccess object:nil];
        }else {
            NSLog(@"connectionError = %@",connectionError);
        }

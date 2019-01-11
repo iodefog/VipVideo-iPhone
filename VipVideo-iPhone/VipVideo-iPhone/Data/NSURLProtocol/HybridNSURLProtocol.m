@@ -93,8 +93,7 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
 //       ||[requestUrl.pathExtension hasPrefix:@"mp4"]
        )
     {
-        if ([[[VipURLManager sharedInstance] currentVipApi] length] > 0 &&
-            ![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
+        if (![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
             NSArray *urlArray = [requestUrl componentsSeparatedByString:@"url="];
             
             static bool isShow = NO;
