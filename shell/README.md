@@ -10,6 +10,6 @@ cd ~/Documents/your_project/
 
 # 执行脚本
 #  脚本名称       				   项目地址       	项目名称   	  编译环境   版本号   备注
-sh ./shell/archiveipaAndUpload.sh ./your_project/ 	your_scheme   Debug     1.0    "提交"
+sh ./shell/archiveipa.sh ./  VipVideo-iPhone Release     1.5 "msg"
 ```
 

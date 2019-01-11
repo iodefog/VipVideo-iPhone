@@ -10,9 +10,7 @@
 #import "AppDelegate.h"
 #import "JSONKit.h"
 
-#warning 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
-
-#define OnlineVipUrl @"https://iodefog.github.io/text/mviplist.json"
+#define OnlineVipUrl @"https://iodefog.github.io/text/viplist.json"
 
 @implementation VipUrlItem
 
@@ -69,7 +67,10 @@
 
 - (void)initDefaultData{
     NSError *error = nil;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"mviplist" ofType:@"json"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"viplist" ofType:@"json"];
+    if (!path) {
+        return;
+    }
     NSData *data = [NSData dataWithContentsOfFile:path options:NSDataReadingMappedIfSafe error:&error];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
     NSLog(@"%@,error %@",dict, error);
@@ -89,6 +90,34 @@
        if(!connectionError){
            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
            NSLog(@"%@",dict);
+           
+           BOOL update = [dict[@"i_new_version_info"][@"i_update"] boolValue];
+           NSString *updateMsg = dict[@"i_new_version_info"][@"i_updateMessage"];
+           BOOL limit = [dict[@"i_new_version_info"][@"i_needLimit"] boolValue];
+           if (limit || update) {
+               UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"app已失效" message:updateMsg preferredStyle:UIAlertControllerStyleAlert];
+               UIAlertAction *updateAction = [UIAlertAction actionWithTitle:@"下载安装包" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                   NSLog(@"确定");
+                   [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://iodefog.github.io/dmg/VipVideo-iPhone.zip"]];
+                   if (limit) {
+                       exit(0);
+                   }
+               }];
+               
+               UIAlertAction *exitAction = [UIAlertAction actionWithTitle:@"退出" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                   NSLog(@"退出");
+                   if (limit) {
+                       exit(0);
+                   }
+               }];
+               
+               [alert addAction:updateAction];
+               [alert addAction:exitAction];
+
+               [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+               return;
+           }
+           
            [self transformJsonToModel:dict[@"list"]];
            [self transformPlatformJsonToModel:dict[@"platformlist"]];
            NSDictionary *defaultDict = dict[@"default"];

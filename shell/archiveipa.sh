@@ -21,7 +21,9 @@ echo $CurrentPath
 
 cd  $1
 
-#cd $ArchiveScheme
+pwd
+
+cd $ArchiveScheme
 
 xcodebuild clean
 
@@ -31,7 +33,7 @@ mkdir  $FilePath
 
 xcodebuild archive -workspace ${ArchiveScheme}.xcworkspace -scheme $ArchiveScheme -configuration $Configution -archivePath "../archiveipa/${ArchiveScheme}.xcarchive"
 
-xcodebuild -exportArchive -archivePath "$FilePath/${ArchiveScheme}.xcarchive" -exportPath $FilePath -exportOptionsPlist  ${CurrentPath}/shell/ExportOptions.plist 
+xcodebuild -exportArchive -archivePath "$FilePath/${ArchiveScheme}.xcarchive" -exportPath $FilePath -exportOptionsPlist  ${CurrentPath}/shell/ExportOptions.plist
 
 ret=$?
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
+		4F4D235B21E8262500E366D8 /* viplist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D235A21E8262500E366D8 /* viplist.json */; };
 		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
 		4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */; };
 		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
@@ -82,6 +83,7 @@
 /* Begin PBXFileReference section */
 		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
+		4F4D235A21E8262500E366D8 /* viplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = viplist.json; path = "VipVideo-iPhone/viplist.json"; sourceTree = SOURCE_ROOT; };
 		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
 		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
 		4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				C7240A9D1FA174D3000684F1 /* Assets.xcassets */,
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
+				4F4D235A21E8262500E366D8 /* viplist.json */,
 				C7240AA31FA174D3000684F1 /* main.m */,
 			);
 			path = "Support File";
@@ -474,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
+				4F4D235B21E8262500E366D8 /* viplist.json in Resources */,
 				C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */,
 				C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */,
 				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
