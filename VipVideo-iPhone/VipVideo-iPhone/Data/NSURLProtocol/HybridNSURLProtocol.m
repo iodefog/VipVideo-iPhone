@@ -7,7 +7,7 @@
 //
 
 #import "HybridNSURLProtocol.h"
-#import "HLHomeViewController.h"
+#import "HLWebVideoViewController.h"
 #import "HLPlayerViewController.h"
 #import "UIViewController+.h"
 #import <UIKit/UIKit.h>
@@ -93,19 +93,19 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
 //       ||[requestUrl.pathExtension hasPrefix:@"mp4"]
        )
     {
-        if (![[UIViewController topViewController] isKindOfClass:[HLPlayerViewController class]]) {
+        if ([VipURLManager sharedInstance].currentPlayer == nil) {
             NSArray *urlArray = [requestUrl componentsSeparatedByString:@"url="];
             
             static bool isShow = NO;
             HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
-            
+            [VipURLManager sharedInstance].currentPlayer = playerVC;
             
             NSLog(@"RealVideoUrl %@", [urlArray lastObject]);
             playerVC.url = [NSURL URLWithString:[urlArray lastObject]];
             UIViewController *topVC = [UIViewController topkeyWindowViewController];
-            __block __weak HLHomeViewController *homeVC = nil;
+            __block __weak HLWebVideoViewController *homeVC = nil;
             for (UIViewController *vc in topVC.navigationController.childViewControllers) {
-                if ([vc isKindOfClass:NSClassFromString(@"HLHomeViewController")]) {
+                if ([vc isKindOfClass:NSClassFromString(@"HLWebVideoViewController")]) {
                     playerVC.title = vc.title?:vc.navigationItem.title;
                     homeVC = (id)vc;
                     break;
@@ -113,7 +113,7 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
             }
             
             
-            playerVC.backBlock = ^(BOOL finish){
+            playerVC.backCompleteBlock = ^(BOOL finish){
                 if (finish && (urlArray.count >= 2) && [[homeVC webView] respondsToSelector:@selector(canGoBack)]) {
                     if ([[homeVC webView] performSelector:@selector(canGoBack)]) {
                         [[homeVC webView] performSelector:@selector(goBack)];

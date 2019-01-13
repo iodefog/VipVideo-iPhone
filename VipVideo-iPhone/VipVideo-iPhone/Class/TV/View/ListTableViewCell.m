@@ -31,9 +31,9 @@
     [self addSubview:self.canPlayLabel];
 
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.equalTo(@(10));
+        make.left.mas_equalTo(10);
+        make.bottom.top.equalTo(self);
         make.right.equalTo(self).offset(-10);
-        make.height.mas_equalTo(20);
     }];
     
 //    [self.urlLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,7 +101,7 @@
 - (UILabel *)nameLabel{
     if (!_nameLabel) {
         _nameLabel = [[UILabel alloc] init];
-        _nameLabel.font = [UIFont boldSystemFontOfSize:15];
+//        _nameLabel.font = [UIFont boldSystemFontOfSize:15];
     }
     return _nameLabel;
 }

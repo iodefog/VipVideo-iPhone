@@ -46,27 +46,27 @@
 }
 
 - (void)setNeedsStatusBarAppearanceUpdate{
-    self.searchBar.frame = CGRectMake(0, 64, self.view.bounds.size.width, 44);
-    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height);
+    self.searchBar.frame = CGRectMake(0, kNavgationBarHeight, self.view.bounds.size.width, 44);
+    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height + kNavgationBarHeight, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height);
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationPortrait;
-    self.searchBar.frame = CGRectMake(0, 64, self.view.bounds.size.width, 44);
-    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height-64);
+    self.searchBar.frame = CGRectMake(0, kNavgationBarHeight, self.view.bounds.size.width, 44);
+    self.liveListTableView.frame = CGRectMake(0, self.searchBar.frame.size.height + kNavgationBarHeight, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height - kNavgationBarHeight);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = self.dict[@"title"];
-    
+    self.title = self.dict[@"title"] ?: @"电台直播";
+
     [self.view addSubview:self.searchBar];
     [self.view addSubview:self.liveListTableView];
     
     [self addBackgroundMethod];
-    [self operationStr];
+    [self requestNetWorkData];
     [self registerObserver];
 //    [self setNavgationRightItem];
     [self addMasonry];
@@ -78,7 +78,7 @@
 - (void)addMasonry{
     [self.searchBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.equalTo(@(64));
+        make.top.equalTo(@(kNavgationBarHeight));
         make.height.mas_equalTo(44);
     }];
     
@@ -294,7 +294,7 @@
 
 - (UISearchBar *)searchBar{
     if (!_searchBar) {
-        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, 44)];
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, kNavgationBarHeight, self.view.bounds.size.width, 44)];
         _searchBar.searchBarStyle = UISearchBarStyleDefault;
         _searchBar.tintColor = [UIColor lightTextColor];
         _searchBar.returnKeyType = UIReturnKeySearch;
@@ -306,7 +306,7 @@
 
 - (UITableView *)liveListTableView{
     if (_liveListTableView == nil) {
-        _liveListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.searchBar.frame.size.height+64, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height) style:UITableViewStylePlain];
+        _liveListTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.searchBar.frame.size.height + kNavgationBarHeight, self.view.bounds.size.width, self.view.bounds.size.height-self.searchBar.frame.size.height) style:UITableViewStylePlain];
         _liveListTableView.delegate = self;
         _liveListTableView.estimatedRowHeight = 100;
         _liveListTableView.rowHeight = UITableViewAutomaticDimension;
@@ -430,79 +430,18 @@
     }
     
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+    [VipURLManager sharedInstance].currentPlayer = playerVC;
     playerVC.canDownload = NO;
     playerVC.url = [NSURL URLWithString:movieUrl];
     __weak typeof(self) weakself = self;
-    [playerVC setBackBlock:^(BOOL finish) {
+    [playerVC setBackCompleteBlock:^(BOOL finish) {
         __strong typeof(self) strongself = weakself;
         if (strongself) {
             [strongself dismissViewControllerAnimated:YES completion:nil];
         }
     }];
-    [self presentViewController:playerVC animated:YES completion:nil];
     
-        /*
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        params[@"KxMovieParameterDisableDeinterlacing"] = @(YES);
-        KxMovieViewController *vc = [KxMovieViewController
-                                     movieViewControllerWithContentPath:movieUrl
-                                     parameters:params];
-        vc.timeout = 60;
-        __block NSString *movieStr = movieUrl;
-        __weak __block typeof(self) mySelf = self;
-        __weak __block typeof(KxMovieViewController *) myvc = vc;
-        
-        self.kxResetPop = YES;
-        
-        vc.VCCallBack = ^(void){
-            mySelf.kxResetPop = YES;
-        };
-        
-        vc.playCallBack = ^(NSError *error , BOOL success){
-            if (success) {
-                ListTableViewCell *ttcell = [mySelf.liveListTableView cellForRowAtIndexPath:indexPath];
-                if (ttcell.canPlayLabel.hidden || !ttcell.canPlayLabel) {
-                    [mySelf saveCanPlayHistory:movieStr];
-                    [mySelf saveCanPlayHistoryToDocument:movieStr name:movieName];
-                }
-                MMovieModel *model =  self.dataSource[indexPath.row];
-                model.canPlay = YES;
-                ttcell.canPlayLabel.hidden = NO;
-                mySelf.kxResetPop = NO;
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
-                    if (mySelf.kxResetPop || !self.autoPlaySwitch.on) {
-                        return;
-                    }
-                    [myvc dismissViewControllerAnimated:YES completion:nil];
-                    mySelf.kxResetPop = NO;
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
-                        if (mySelf.kxResetPop) {
-                            return;
-                        }
-                        [mySelf autoPlayNextVideo:indexPath delegate:mySelf];
-                    });
-                });
-                
-            }else {
-                [myvc.alertView dismissWithClickedButtonIndex:0 animated:YES];
-                [myvc dismissViewControllerAnimated:YES completion:nil];
-                mySelf.kxResetPop = NO;
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
-                    if (mySelf.kxResetPop || !self.autoPlaySwitch.on) {
-                        return;
-                    }
-                    [mySelf autoPlayNextVideo:indexPath delegate:mySelf];
-                });
-            }
-        };
-        [self presentViewController:vc animated:YES completion:nil];
-        
-    }else {
-        MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:movieUrl]];
-        self.playerController = player;
-        [self presentMoviePlayerViewControllerAnimated:player];
-           */
-//    }
+    [self presentViewController:playerVC animated:YES completion:nil];
 }
 
 
@@ -611,5 +550,48 @@
     }
 }
 
+#pragma mark -
+
+#define FileNamePre         @"LiveList"
+#define TVHostURL           @"https://iodefog.github.io/text/"
+#define VideosTVListName    @"VideosTVListName.txt"
+
+- (void)requestNetWorkData{
+    
+    NSString *videosTVListNameUrl = [NSString stringWithFormat:@"%@%@", TVHostURL,VideosTVListName];
+    
+    __block NSError *error = nil;
+    
+    NSString *result = nil;
+    if (videosTVListNameUrl) {
+        result =  [[NSUserDefaults standardUserDefaults] objectForKey:videosTVListNameUrl];
+    }
+    [self transformRootVideoUrlFromString:result error:error];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSString *videoList = [NSString stringWithContentsOfURL:[NSURL URLWithString:videosTVListNameUrl] encoding:NSUTF8StringEncoding error:&error];
+        error ? NSLog(@"%@", error) : nil;
+        [self transformRootVideoUrlFromString:videoList error:error];
+        
+        if (videosTVListNameUrl && videoList) {
+            [[NSUserDefaults standardUserDefaults] setObject:videoList forKey:videosTVListNameUrl];
+        }
+    });
+}
+
+- (void)transformRootVideoUrlFromString:(NSString *)videoList error:(NSError *)error
+{
+    [self.dataSource removeAllObjects];
+    NSArray *titleArray = [videoList componentsSeparatedByString:@"\n"];
+    for (NSString *title in titleArray) {
+        [self.dataSource addObject:@{@"title":title,
+                                     @"filePath":[NSString stringWithFormat:@"%@%@", TVHostURL, title]}];
+    }
+    
+    NSDictionary *firstDict = [self.dataSource firstObject];
+    self.dict = firstDict;
+    
+    [self operationStr];
+}
 
 @end

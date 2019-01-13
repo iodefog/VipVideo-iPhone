@@ -81,6 +81,7 @@
     QSPDownloadSource *source = self.dataArr[indexPath.row];
     NSLog(@"%@", source.location);
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+    [VipURLManager sharedInstance].currentPlayer = playerVC;
     playerVC.url = [NSURL fileURLWithPath:source.location];
     playerVC.canDownload = NO;
     [self presentViewController:playerVC animated:YES completion:nil];

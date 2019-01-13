@@ -15,6 +15,7 @@
 @interface VipUrlItem:NSObject
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *icon;
 @property (nonatomic, strong) NSString *url;
 
 + (instancetype)createTitle:(NSString *)title url:(NSString *)url;
@@ -30,6 +31,9 @@
 
 @property (nonatomic, strong) NSString *currentVipApi;
 @property (nonatomic, assign) NSInteger currentIndex;
+
+@property (nonatomic, weak) id currentPlayer;
+
 
 + (instancetype)sharedInstance;
 - (void)changeVideoItem:(VipUrlItem *)item;

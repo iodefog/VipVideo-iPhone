@@ -2,351 +2,138 @@
 //  HLHomeViewController.m
 //  VipVideo-iPhone
 //
-//  Created by LHL on 2017/10/26.
-//  Copyright © 2017年 SV. All rights reserved.
+//  Created by LiHongli on 2019/1/12.
+//  Copyright © 2019 SV. All rights reserved.
 //
 
 #import "HLHomeViewController.h"
-#import "DownloadViewController.h"
-#import "HLPlayerViewController.h"
-#import <AVFoundation/AVFoundation.h>
-#import <AVKit/AVKit.h>
-#import "FTPopOverMenu.h"
+#import "HLWebVideoViewController.h"
 #import "VipURLManager.h"
 #import "Masonry.h"
-#import "HybridNSURLProtocol.h"
+
+@interface HLHomeCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) VipUrlItem    *object;
+@property (nonatomic, strong) UIImageView   *iconImageView;
+@property (nonatomic, strong) UILabel       *titleLabel;
+
+@end
+
+@implementation HLHomeCollectionViewCell
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame]) {
+        [self createUI];
+    }
+    
+    return self;
+}
+
+- (void)createUI
+{
+    self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.iconImageView.backgroundColor = [UIColor lightGrayColor];
+    self.iconImageView.layer.cornerRadius = 10;
+    
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.titleLabel.textColor = [UIColor lightGrayColor];
+    self.titleLabel.font = [UIFont systemFontOfSize:13];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
+    [self.contentView addSubview:self.iconImageView];
+    [self.contentView addSubview:self.titleLabel];
+    
+    [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.height.mas_equalTo(self.contentView.mas_width).multipliedBy(2/3.0);
+        make.center.equalTo(self.contentView);
+    }];
+    
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(self.contentView);
+        make.top.equalTo(self.iconImageView.mas_bottom).offset(5);
+        make.height.mas_equalTo(17);
+    }];
+}
+
+- (void)setObject:(VipUrlItem *)object
+{
+    self.titleLabel.text = object.title;
+    self.iconImageView.image = [UIImage imageNamed:object.icon];
+    if (!self.iconImageView.image) {
+        self.iconImageView.image = [UIImage imageNamed:@"视频"];
+    } else {
+        self.iconImageView.backgroundColor = [UIColor clearColor];
+    }
+}
+
+@end
 
 
-@interface HLHomeViewController ()<UIGestureRecognizerDelegate>
+#pragma mark ---
 
-@property (nonatomic, strong) NSMutableArray *modelsArray;
+#define kHLHomeMaxColumCount  5
 
-@property (nonatomic, strong) VipUrlItem     *currentModel;
-@property (nonatomic, strong) NSString       *currentUrl;
+@interface HLHomeViewController ()
 
-@property (nonatomic, copy)   NSURL          *currentVideoUrl;
-
-@property (nonatomic, strong) UIButton       *leftButton;
-@property (nonatomic, strong) UIButton       *rightButton;
-//@property (nonatomic, strong) UIButton       *downloadButton;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
 @implementation HLHomeViewController
 
-- (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (instancetype)init
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    CGFloat itemWidth = CGRectGetWidth([UIScreen mainScreen].bounds)/kHLHomeMaxColumCount;
+    flowLayout.itemSize = CGSizeMake(itemWidth, itemWidth + 20);
+    flowLayout.headerReferenceSize = CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 20);
+    
+    if (self = [super initWithCollectionViewLayout:flowLayout]) {
+        
+    }
+    return self;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    if (!_leftButton) {
-        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [leftButton setImage:[UIImage imageNamed:@"platlist"] forState:UIControlStateNormal];
-//        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
-        leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        [leftButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-        leftButton.frame = CGRectMake(0, 0, 30, 44);
-        [leftButton addTarget:self action:@selector(videosClicked:) forControlEvents:UIControlEventTouchUpInside];
-        self.leftButton = leftButton;
-    }
-    
-    if (!self.rightButton) {
-        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [rightButton setTitle:@"转换" forState:UIControlStateNormal];
-        [rightButton setImage:[UIImage imageNamed:@"VIP"] forState:UIControlStateNormal];
-        rightButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        rightButton.frame = CGRectMake(0, 0, 30, 44);
-        [rightButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-        [rightButton addTarget:self action:@selector(apiClicked:) forControlEvents:UIControlEventTouchUpInside];
-        self.rightButton = rightButton;
-    }
-    
-//    if (!self.downloadButton) {
-//        UIButton *downloadButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [downloadButton setTitle:@"下载" forState:UIControlStateNormal];
-//        downloadButton.titleLabel.font = [UIFont systemFontOfSize:14];
-//        downloadButton.frame = CGRectMake(0, 0, 30, 44);
-//        [downloadButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-//        [downloadButton addTarget:self action:@selector(downloadClicked:) forControlEvents:UIControlEventTouchUpInside];
-//        self.downloadButton = downloadButton;
-//    }
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        self.navigationItem.leftBarButtonItems = @[
-                                                   [[UIBarButtonItem alloc] initWithCustomView:self.leftButton],
-                                                   [[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
-    }
-    else {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
-        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton],];
-    }
-}
-
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-
-    [NSURLProtocol registerClass:[HybridNSURLProtocol class]];
-
-    [[ UIApplication sharedApplication] setIdleTimerDisabled:YES];
-//    self.navigationButtonsHidden = NO;
-    if (@available(iOS 11.0, *)) {
-//        self.webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
-
-    self.modelsArray = [NSMutableArray array];
-    [self configurationWebVC];
-    [self resignNotifacation];
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];//获取app版本信息
+    self.title = [infoDictionary objectForKey:@"CFBundleDisplayName"];;
     
-    [self.modelsArray addObjectsFromArray: [[VipURLManager sharedInstance] platformItemsArray]];
-    [self refreshVideoModel:[self.modelsArray firstObject]];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
-    UILongPressGestureRecognizer *longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longGesture:)];
-    longGesture.delegate = self;
-    [self.webView addGestureRecognizer:longGesture];
-    
+    self.dataArray = [NSMutableArray arrayWithArray:[VipURLManager sharedInstance].platformItemsArray];
+    [self.collectionView registerClass:[HLHomeCollectionViewCell class] forCellWithReuseIdentifier:@"HLHomeCollectionViewCell"];
 }
 
-
-- (void)back{
-    if (![self.navigationController popViewControllerAnimated:YES]) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-}
-
-- (void)configurationWebVC{
-    
-    self.showsToolBar = NO;
-    self.navigationType = AXWebViewControllerNavigationToolItem;
-    self.maxAllowedTitleLength = 999;
-    
-
-    
-    FTPopOverMenuConfiguration *configuration = [FTPopOverMenuConfiguration defaultConfiguration];
-    configuration.textAlignment = NSTextAlignmentCenter;
-    
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-    {
-        configuration.menuWidth = 200;
-        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
-        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-    }
-    else {
-        
-        self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton]];
-        [self.webView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
-    }
-    
-    
-}
-
-- (void)resignNotifacation{
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vipVideoCurrentApiWillChange:) name:KHLVipVideoCurrentApiWillChange object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vipVideoCurrentApiDidChange:) name:KHLVipVideoCurrentApiDidChange object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vipVideoRequestSueccess:) name:KHLVipVideoRequestSuccess object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(playerItemBecameCurrent:)
-                                                 name:@"AVPlayerItemBecameCurrentNotification"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(windowVisible:)
-                                                 name:UIWindowDidBecomeVisibleNotification
-                                               object:self.view.window];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(windowHidden:)
-                                                 name:UIWindowDidBecomeHiddenNotification
-                                               object:self.view.window];
-}
-
-static bool isShow = NO;
-
-- (void)longGesture:(UIGestureRecognizer *)gesture{
-    if (self.currentVideoUrl) {
-        if (isShow) {
-            return;
-        }
-        
-        isShow = YES;
-        [self delayOpreation];
-    }
-}
-
-- (void)delayOpreation{
-
-    HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
-    playerVC.backBlock = ^(BOOL success){
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            isShow = NO;
-        });
-    };
-    NSLog(@"Real Video Url %@", self.currentVideoUrl);
-    playerVC.url = self.currentVideoUrl;
-    [self presentViewController:playerVC animated:YES completion:nil];
-}
-
-- (void)refreshVideoModel:(VipUrlItem *)model{
-    self.currentModel = model;
-    
-    [self loadURL:[NSURL URLWithString:model.url]];
-}
-
-// 视频平台点击
-- (void)videosClicked:(id)sender {
-    NSMutableArray *titlesArray = [NSMutableArray array];
-    for (VipUrlItem *item in self.modelsArray) {
-        [titlesArray addObject:item.title?:@""];
-    }
-    
-    if (titlesArray.count ==0) {
-        return;
-    }
-    FTPopOverMenuConfiguration *configuration = [FTPopOverMenuConfiguration defaultConfiguration];
-    configuration.menuWidth = 100;
-
-    __weak typeof(self) mySelf = self;
-    [FTPopOverMenu showForSender:sender withMenuArray:titlesArray doneBlock:^(NSInteger selectedIndex) {
-        [mySelf refreshVideoModel:self.modelsArray[selectedIndex]];
-    } dismissBlock:^{
-        NSLog(@"user canceled. do nothing.");
-    }];
-}
-
-// 接口切换点击
-- (void)apiClicked:(id)sender {
-    NSMutableArray *titlesArray = [NSMutableArray array];
-    for (VipUrlItem *item in [VipURLManager sharedInstance].itemsArray) {
-        [titlesArray addObject:item.title?:@""];
-    }
-    if (titlesArray.count ==0) {
-        return;
-    }
-    
-    FTPopOverMenuConfiguration *configuration = [FTPopOverMenuConfiguration defaultConfiguration];
-    configuration.menuWidth = 150;
-    
-    [FTPopOverMenu showForSender:sender withMenuArray:titlesArray doneBlock:^(NSInteger selectedIndex) {
-        VipURLManager *manager = [VipURLManager sharedInstance];
-        [manager changeVideoItem:manager.itemsArray[selectedIndex]];
-    } dismissBlock:^{
-        NSLog(@"user canceled. do nothing.");
-    }];
-}
-
-//- (void)downloadClicked:(UIButton *)sender{
-//    DownloadViewController *downloadVC = [[DownloadViewController alloc] init];
-//    [self.navigationController pushViewController:downloadVC animated:YES];
-//}
-
-- (void)vipVideoCurrentApiWillChange:(NSNotification *)notification{
-    NSString *url = [[_currentUrl componentsSeparatedByString:@"url="] lastObject];
-    if ([url hasPrefix:@"http"]) {
-        _currentUrl = url;
-    }
-}
-
-- (void)vipVideoCurrentApiDidChange:(NSNotification *)notification{
-    
-#if AX_WEB_VIEW_CONTROLLER_USING_WEBKIT
-    [self.webView evaluateJavaScript:@"document.location.href" completionHandler:^(NSString *url, NSError * _Nullable error) {
-        
-        NSString *originUrl = [[url componentsSeparatedByString:@"url="] lastObject];
-
-        if (![url hasPrefix:@"http"]) {
-            return ;
-        }
-
-        NSString *finalUrl = [NSString stringWithFormat:@"%@%@", [[VipURLManager sharedInstance] currentVipApi]?:@"",originUrl?:@""];
-        NSLog(@"finalUrl = %@", finalUrl);
-        [self loadURL:[NSURL URLWithString:finalUrl]];
-    }];
-#else
-    NSString *url =  [self.webView stringByEvaluatingJavaScriptFromString:@"document.location.href"];
-    NSString *originUrl = [[url componentsSeparatedByString:@"url="] lastObject];
-    
-    if (![url hasPrefix:@"http"]) {
-        return ;
-    }
-    
-    NSString *finalUrl = [NSString stringWithFormat:@"%@%@", [[VipURLManager sharedInstance] currentVipApi]?:@"",originUrl?:@""];
-    NSLog(@"finalUrl = %@", finalUrl);
-    [self loadURL:[NSURL URLWithString:finalUrl]];
-#endif
-    
-    
-}
-
-- (void)vipVideoRequestSueccess:(NSNotification *)notificaiton{
-    NSArray *platformArray = [[VipURLManager sharedInstance] platformItemsArray];
-    if (platformArray.count > 0) {
-        
-        [self.modelsArray removeAllObjects];
-        [self.modelsArray addObjectsFromArray:platformArray];
-        [self refreshVideoModel:[self.modelsArray firstObject]];
-    }
-}
-
-- (void)playerItemBecameCurrent:(NSNotification *)notification{
-    AVPlayerItem *playerItem = [notification object];
-    if(playerItem == nil) return;
-    if ([playerItem isKindOfClass:[AVPlayerItem class]])
-    {
-        // Break down the AVPlayerItem to get to the path
-        AVURLAsset *asset = (AVURLAsset*)[playerItem asset];
-        NSURL *url = [asset URL];
-        NSString *path = [url absoluteString];
-        NSLog(@"bbbbbbb %@", path);
-        
-        self.currentVideoUrl = url;
-        
-//        [self longGesture:nil];
-    }
-}
-
-- (void)windowVisible:(NSNotification *)notification
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    UIViewController *viewController = [notification.object rootViewController];
-//    [viewController dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"-windowVisible");
+    return self.dataArray.count;
 }
 
-- (void)windowHidden:(NSNotification *)notification
+- (HLHomeCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"-windowHidden");
+    static NSString *cellId = @"HLHomeCollectionViewCell";
+    HLHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    
+    if (indexPath.row < self.dataArray.count) {
+        cell.object = self.dataArray[indexPath.row];
+    }
+    
+    return cell;
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    return YES;
-}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    id object = self.dataArray[indexPath.row];
 
-
-- (BOOL)shouldAutorotate {
-    return NO;
+    HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
+    videoVC.urlItem = object;
+    videoVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:videoVC animated:YES];
 }
-//返回支持的方向
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
-}
-//这个是返回优先方向
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationPortrait;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

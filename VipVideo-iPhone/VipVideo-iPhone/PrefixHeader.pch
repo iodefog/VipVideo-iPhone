@@ -15,4 +15,14 @@
 
 #define HLVideoIphoneUAChange @"HLVideoIphoneUAChange"
 #define HLVideoIphoneUAisOn   @"HLVideoIphoneUAisOn"
+
+#define kIsIphone ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+#define kScreenHeight  MAX(CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds))
+#define kScreenWidth = MIN(CGRectGetHeight([UIScreen mainScreen].bounds), CGRectGetWidth([UIScreen mainScreen].bounds))
+#define kNavgationBarHeight ((kIsIphone && (kScreenHeight >= 812)) ? 88 : 64)
+
+
+#import "VipURLManager.h"
+
+
 #endif /* PrefixHeader_pch */

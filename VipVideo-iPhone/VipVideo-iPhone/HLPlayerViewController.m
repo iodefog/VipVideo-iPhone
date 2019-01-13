@@ -125,8 +125,8 @@
 
 /** backBtn event */
 - (void)zf_playerBackAction{
-    if (self.backBlock) {
-        self.backBlock(YES);
+    if (self.backCompleteBlock) {
+        self.backCompleteBlock(YES);
     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -198,8 +198,8 @@
 
 
 -(void)wmplayer:(WMPlayer *)wmplayer clickedCloseButton:(UIButton *)backBtn{
-    if (self.backBlock) {
-        self.backBlock(YES);
+    if (self.backCompleteBlock) {
+        self.backCompleteBlock(YES);
     }
     if (![self.navigationController popViewControllerAnimated:YES]) {
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -214,8 +214,8 @@
 
 -(void)wmplayerFinishedPlay:(WMPlayer *)wmplayer{
     if (![self.navigationController popViewControllerAnimated:YES]) {
-        if (self.backBlock) {
-            self.backBlock(YES);
+        if (self.backCompleteBlock) {
+            self.backCompleteBlock(YES);
         }
         [self dismissViewControllerAnimated:YES completion:nil];
     }

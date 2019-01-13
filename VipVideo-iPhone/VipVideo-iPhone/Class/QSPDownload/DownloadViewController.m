@@ -11,8 +11,9 @@
 #import "FinishedViewController.h"
 #import "UIViewController+.h"
 #import "HLPlayerViewController.h"
+#import "UIScrollView+EmptyDataSet.h"
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate>
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (strong, nonatomic) NSMutableArray *dataArr;
 @property (strong, nonatomic) UILabel *emptyLabel;
@@ -58,6 +59,12 @@
     
     [[QSPDownloadTool shareInstance] addDownloadToolDelegate:self];
     
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+    
+    // A little trick for removing the cell separators
+    self.tableView.tableFooterView = [UIView new];
+    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:self action:@selector(back)];
 }
 
@@ -67,6 +74,13 @@
     FinishedViewController *finishVC = [[FinishedViewController alloc] init];
     finishVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:finishVC animated:YES];
+}
+
+#pragma mark -
+
+- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIImage imageNamed:@"empty_placeholder"];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>代理方法
@@ -102,6 +116,7 @@
         QSPDownloadSource *source = strongSelf.dataArr[strongIndexPath.row];
         
         HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+        [VipURLManager sharedInstance].currentPlayer = playerVC;
         playerVC.url = [NSURL fileURLWithPath:source.netPath];
         playerVC.canDownload = NO;
         [strongSelf presentViewController:playerVC animated:YES completion:nil];
@@ -119,6 +134,7 @@
         QSPDownloadSource *source = self.dataArr[indexPath.row];
         
         HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+        [VipURLManager sharedInstance].currentPlayer = playerVC;
         playerVC.url = [NSURL fileURLWithPath:source.location];
         playerVC.canDownload = NO;
         [self presentViewController:playerVC animated:YES completion:nil];

@@ -17,7 +17,7 @@ typedef void(^HLPlayerVCBackBlock)(BOOL finish);
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, assign) BOOL  canDownload; // 默认YES
 
-@property (nonatomic, copy) HLPlayerVCBackBlock backBlock;
+@property (nonatomic, copy) HLPlayerVCBackBlock backCompleteBlock;
 
 - (void)reloadRequest;
 

@@ -9,9 +9,21 @@
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
 		4F4D235B21E8262500E366D8 /* viplist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D235A21E8262500E366D8 /* viplist.json */; };
+		4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */; };
+		4F78874921E99F6500653A6C /* 搜狐@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874121E99F6500653A6C /* 搜狐@2x.png */; };
+		4F78874A21E99F6500653A6C /* 电影天堂.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874221E99F6500653A6C /* 电影天堂.png */; };
+		4F78874B21E99F6500653A6C /* 芒果@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874321E99F6500653A6C /* 芒果@2x.png */; };
+		4F78874C21E99F6500653A6C /* 优酷@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874421E99F6500653A6C /* 优酷@2x.png */; };
+		4F78874D21E99F6500653A6C /* 腾讯视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874521E99F6500653A6C /* 腾讯视频@2x.png */; };
+		4F78874E21E99F6500653A6C /* 52@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874621E99F6500653A6C /* 52@2x.png */; };
+		4F78874F21E99F6500653A6C /* 爱奇艺@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874721E99F6500653A6C /* 爱奇艺@2x.png */; };
+		4F78875021E99F6500653A6C /* 乐视@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874821E99F6500653A6C /* 乐视@2x.png */; };
+		4F78875221E9A04000653A6C /* 4084@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78875121E9A04000653A6C /* 4084@2x.png */; };
+		4F78875421E9A10F00653A6C /* 视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78875321E9A10F00653A6C /* 视频@2x.png */; };
 		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
 		4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */; };
 		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
+		4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -30,7 +42,7 @@
 		C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE446214F4BEE00288C1C /* platlist@2x.png */; };
 		C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE447214F4BEE00288C1C /* VIP@2x.png */; };
 		C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C72EE44A214F51BC00288C1C /* mine@2x.png */; };
-		C72EE472214F51ED00288C1C /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE44E214F51ED00288C1C /* HLHomeViewController.m */; };
+		C72EE472214F51ED00288C1C /* HLWebVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE44E214F51ED00288C1C /* HLWebVideoViewController.m */; };
 		C72EE473214F51ED00288C1C /* WMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE451214F51ED00288C1C /* WMPlayerModel.m */; };
 		C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C72EE452214F51ED00288C1C /* WMPlayer.bundle */; };
 		C72EE475214F51ED00288C1C /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = C72EE458214F51ED00288C1C /* WMLightView.m */; };
@@ -84,11 +96,24 @@
 		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
 		4F4D235A21E8262500E366D8 /* viplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = viplist.json; path = "VipVideo-iPhone/viplist.json"; sourceTree = SOURCE_ROOT; };
+		4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_placeholder@2x.png"; sourceTree = "<group>"; };
+		4F78874121E99F6500653A6C /* 搜狐@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜狐@2x.png"; sourceTree = "<group>"; };
+		4F78874221E99F6500653A6C /* 电影天堂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电影天堂.png"; sourceTree = "<group>"; };
+		4F78874321E99F6500653A6C /* 芒果@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "芒果@2x.png"; sourceTree = "<group>"; };
+		4F78874421E99F6500653A6C /* 优酷@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "优酷@2x.png"; sourceTree = "<group>"; };
+		4F78874521E99F6500653A6C /* 腾讯视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "腾讯视频@2x.png"; sourceTree = "<group>"; };
+		4F78874621E99F6500653A6C /* 52@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "52@2x.png"; sourceTree = "<group>"; };
+		4F78874721E99F6500653A6C /* 爱奇艺@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱奇艺@2x.png"; sourceTree = "<group>"; };
+		4F78874821E99F6500653A6C /* 乐视@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "乐视@2x.png"; sourceTree = "<group>"; };
+		4F78875121E9A04000653A6C /* 4084@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4084@2x.png"; sourceTree = "<group>"; };
+		4F78875321E9A10F00653A6C /* 视频@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "视频@2x.png"; sourceTree = "<group>"; };
 		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
 		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
 		4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Addition.m"; sourceTree = "<group>"; };
 		4FB74BA921CE85AC00F52070 /* UIButton+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Addition.h"; sourceTree = "<group>"; };
 		4FB74BAB21CE868A00F52070 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		4FD3886F21E991E100D1A3C0 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
 		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -116,8 +141,8 @@
 		C72EE446214F4BEE00288C1C /* platlist@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "platlist@2x.png"; sourceTree = "<group>"; };
 		C72EE447214F4BEE00288C1C /* VIP@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VIP@2x.png"; sourceTree = "<group>"; };
 		C72EE44A214F51BC00288C1C /* mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine@2x.png"; sourceTree = "<group>"; };
-		C72EE44E214F51ED00288C1C /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
-		C72EE44F214F51ED00288C1C /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		C72EE44E214F51ED00288C1C /* HLWebVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWebVideoViewController.m; sourceTree = "<group>"; };
+		C72EE44F214F51ED00288C1C /* HLWebVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWebVideoViewController.h; sourceTree = "<group>"; };
 		C72EE451214F51ED00288C1C /* WMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayerModel.m; sourceTree = "<group>"; };
 		C72EE452214F51ED00288C1C /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
 		C72EE453214F51ED00288C1C /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
@@ -181,6 +206,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F78874021E99F6500653A6C /* viplist */ = {
+			isa = PBXGroup;
+			children = (
+				4F78875321E9A10F00653A6C /* 视频@2x.png */,
+				4F78875121E9A04000653A6C /* 4084@2x.png */,
+				4F78874121E99F6500653A6C /* 搜狐@2x.png */,
+				4F78874221E99F6500653A6C /* 电影天堂.png */,
+				4F78874321E99F6500653A6C /* 芒果@2x.png */,
+				4F78874421E99F6500653A6C /* 优酷@2x.png */,
+				4F78874521E99F6500653A6C /* 腾讯视频@2x.png */,
+				4F78874621E99F6500653A6C /* 52@2x.png */,
+				4F78874721E99F6500653A6C /* 爱奇艺@2x.png */,
+				4F78874821E99F6500653A6C /* 乐视@2x.png */,
+			);
+			name = viplist;
+			path = "VipVideo-iPhone/viplist";
+			sourceTree = SOURCE_ROOT;
+		};
 		4FB74BA721CE85AC00F52070 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +267,7 @@
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
 				4F4D235A21E8262500E366D8 /* viplist.json */,
+				4F78874021E99F6500653A6C /* viplist */,
 				C7240AA31FA174D3000684F1 /* main.m */,
 			);
 			path = "Support File";
@@ -278,6 +322,7 @@
 		C72EE441214F460B00288C1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */,
 				C72EE488214F588D00288C1C /* download@2x.png */,
 				C72EE446214F4BEE00288C1C /* platlist@2x.png */,
 				C72EE447214F4BEE00288C1C /* VIP@2x.png */,
@@ -303,8 +348,10 @@
 		C72EE44D214F51ED00288C1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C72EE44F214F51ED00288C1C /* HLHomeViewController.h */,
-				C72EE44E214F51ED00288C1C /* HLHomeViewController.m */,
+				C72EE44F214F51ED00288C1C /* HLWebVideoViewController.h */,
+				C72EE44E214F51ED00288C1C /* HLWebVideoViewController.m */,
+				4FD3886F21E991E100D1A3C0 /* HLHomeViewController.h */,
+				4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -476,18 +523,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F78874921E99F6500653A6C /* 搜狐@2x.png in Resources */,
 				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
+				4F78874E21E99F6500653A6C /* 52@2x.png in Resources */,
 				4F4D235B21E8262500E366D8 /* viplist.json in Resources */,
 				C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */,
 				C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */,
+				4F78875221E9A04000653A6C /* 4084@2x.png in Resources */,
 				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
+				4F78874A21E99F6500653A6C /* 电影天堂.png in Resources */,
+				4F78874D21E99F6500653A6C /* 腾讯视频@2x.png in Resources */,
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
+				4F78874C21E99F6500653A6C /* 优酷@2x.png in Resources */,
+				4F78874F21E99F6500653A6C /* 爱奇艺@2x.png in Resources */,
+				4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */,
 				C72EE445214F460B00288C1C /* live@2x.png in Resources */,
+				4F78875421E9A10F00653A6C /* 视频@2x.png in Resources */,
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
 				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
+				4F78875021E99F6500653A6C /* 乐视@2x.png in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
 				C72EE474214F51ED00288C1C /* WMPlayer.bundle in Resources */,
 				C72EE44B214F51BD00288C1C /* mine@2x.png in Resources */,
+				4F78874B21E99F6500653A6C /* 芒果@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +609,7 @@
 				C72EE47F214F51ED00288C1C /* MMovieModel.m in Sources */,
 				C70B57A92112AC200024D60B /* NSURLProtocol+WKWebVIew.m in Sources */,
 				C72EE475214F51ED00288C1C /* WMLightView.m in Sources */,
-				C72EE472214F51ED00288C1C /* HLHomeViewController.m in Sources */,
+				C72EE472214F51ED00288C1C /* HLWebVideoViewController.m in Sources */,
 				C72EE47D214F51ED00288C1C /* HLTVHomeViewController.m in Sources */,
 				C7240AA41FA174D3000684F1 /* main.m in Sources */,
 				C72EE480214F51ED00288C1C /* ListTableViewCell.m in Sources */,
@@ -562,6 +620,7 @@
 				C72EE47E214F51ED00288C1C /* HLTVListViewController.m in Sources */,
 				C72EE476214F51ED00288C1C /* FastForwardView.m in Sources */,
 				C72EE477214F51ED00288C1C /* WMPlayer.m in Sources */,
+				4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
 				C72EE487214F530000288C1C /* HLMineViewController.m in Sources */,
 				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,

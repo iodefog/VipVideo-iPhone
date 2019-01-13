@@ -2,15 +2,16 @@
 //  HLHomeViewController.h
 //  VipVideo-iPhone
 //
-//  Created by LHL on 2017/10/26.
-//  Copyright © 2017年 SV. All rights reserved.
+//  Created by LiHongli on 2019/1/12.
+//  Copyright © 2019 SV. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "AXWebViewController.h"
 
-@interface HLHomeViewController : AXWebViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface HLHomeViewController : UICollectionViewController
 
 @end
 
+NS_ASSUME_NONNULL_END

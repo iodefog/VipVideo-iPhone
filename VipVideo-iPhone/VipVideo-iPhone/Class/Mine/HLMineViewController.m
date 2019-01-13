@@ -36,7 +36,7 @@
     [self.view addSubview:uaSwitch];
     
     [uaLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).offset(64+15);
+        make.top.equalTo(self.view).offset(kNavgationBarHeight + 15);
         make.left.equalTo(self.view).offset(15);
     }];
     

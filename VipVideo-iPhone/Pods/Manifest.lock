@@ -20,6 +20,7 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
+  - DZNEmptyDataSet (1.8.1)
   - FTPopOverMenu (1.3.3)
   - HLAdditions (1.0.4)
   - Masonry (1.1.0)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AXWebViewController
   - Bugly
   - CocoaHTTPServer
+  - DZNEmptyDataSet
   - FTPopOverMenu
   - HLAdditions
   - Masonry
@@ -48,6 +50,7 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - CocoaHTTPServer
     - CocoaLumberjack
+    - DZNEmptyDataSet
     - FTPopOverMenu
     - HLAdditions
     - Masonry
@@ -63,11 +66,12 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FTPopOverMenu: a12bb907b8402acc4566ce3ac85f706e09af19e8
   HLAdditions: 611544862c3c85a2c77f165b3e426391e1cbddf0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
 
-PODFILE CHECKSUM: aea9c5bf463831bd4247d042a46111a18af1fe8b
+PODFILE CHECKSUM: 7aeb8007c6d13122d7fdc2e3cc6016bc23017ee8
 
 COCOAPODS: 1.5.3
