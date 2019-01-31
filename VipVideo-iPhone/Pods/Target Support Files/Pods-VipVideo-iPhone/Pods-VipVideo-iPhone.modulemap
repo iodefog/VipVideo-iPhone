@@ -1,0 +1,6 @@
+module Pods_VipVideo_iPhone {
+  umbrella header "Pods-VipVideo-iPhone-umbrella.h"
+
+  export *
+  module * { export * }
+}

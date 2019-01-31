@@ -132,7 +132,11 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
     }
     return _videoGravity;
 }
-
+- (void)setCanDownload:(BOOL)canDownload
+{
+    _downloadBtn.hidden = !canDownload;
+    _canDownload = canDownload;
+}
 -(void)initWMPlayer{
     NSError *setCategoryErr = nil;
     NSError *activationErr  = nil;

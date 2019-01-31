@@ -30,7 +30,7 @@ static  NSInteger QueueMax = 3;
         self.fileName = fileName;
         self.filePathName = pathName;
         
-        NSString *pathPrefix = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+        NSString *pathPrefix = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
         // 拼接目录
         self.filePath = [[pathPrefix stringByAppendingPathComponent:kPathDownload] stringByAppendingPathComponent:self.filePathName];
         NSLog(@"------ %@",self.filePath);

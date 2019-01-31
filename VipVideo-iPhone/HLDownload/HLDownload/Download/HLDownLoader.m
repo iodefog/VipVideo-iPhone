@@ -266,7 +266,7 @@ static NSLock *downloadLock;
     
     if(self.playlist !=nil)
     {
-        NSString *pathPrefix = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+        NSString *pathPrefix = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
         NSString *saveTo = [[pathPrefix stringByAppendingPathComponent:kPathDownload] stringByAppendingPathComponent:self.filePath];
         NSString *fullpath = [saveTo stringByAppendingPathComponent:@"index.m3u8"];
         

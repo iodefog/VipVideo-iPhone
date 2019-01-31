@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		088C7960D08CBD6A7BFBE2BD /* libPods-VipVideo-iPhone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */; };
 		4F4D235B21E8262500E366D8 /* viplist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D235A21E8262500E366D8 /* viplist.json */; };
+		4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */; };
+		4F52603F22031B000028DB62 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F52603E22031B000028DB62 /* back@2x.png */; };
 		4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */; };
 		4F78874921E99F6500653A6C /* 搜狐@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874121E99F6500653A6C /* 搜狐@2x.png */; };
 		4F78874A21E99F6500653A6C /* 电影天堂.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F78874221E99F6500653A6C /* 电影天堂.png */; };
@@ -32,7 +34,6 @@
 		C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */; };
 		C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240A951FA174D3000684F1 /* AppDelegate.m */; };
 		C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9A1FA174D3000684F1 /* Main.storyboard */; };
-		C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9D1FA174D3000684F1 /* Assets.xcassets */; };
 		C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */; };
 		C7240AA41FA174D3000684F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7240AA31FA174D3000684F1 /* main.m */; };
 		C72675C720E08A2A00D1F92E /* HLDownload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72675C620E08A2100D1F92E /* HLDownload.framework */; };
@@ -96,6 +97,9 @@
 		374B924D2BF783FA18A84027 /* Pods-VipVideo-iPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		3FFBABEA1A43DE0B38ED6A63 /* Pods-VipVideo-iPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VipVideo-iPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone.release.xcconfig"; sourceTree = "<group>"; };
 		4F4D235A21E8262500E366D8 /* viplist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = viplist.json; path = "VipVideo-iPhone/viplist.json"; sourceTree = SOURCE_ROOT; };
+		4F52603A220309CE0028DB62 /* BHBNetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBNetworkSpeed.h; sourceTree = "<group>"; };
+		4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBNetworkSpeed.m; sourceTree = "<group>"; };
+		4F52603E22031B000028DB62 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_placeholder@2x.png"; sourceTree = "<group>"; };
 		4F78874121E99F6500653A6C /* 搜狐@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜狐@2x.png"; sourceTree = "<group>"; };
 		4F78874221E99F6500653A6C /* 电影天堂.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "电影天堂.png"; sourceTree = "<group>"; };
@@ -206,6 +210,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F526038220309CE0028DB62 /* Addtations */ = {
+			isa = PBXGroup;
+			children = (
+				4F526039220309CE0028DB62 /* BHBNetworkSpeed */,
+			);
+			path = Addtations;
+			sourceTree = "<group>";
+		};
+		4F526039220309CE0028DB62 /* BHBNetworkSpeed */ = {
+			isa = PBXGroup;
+			children = (
+				4F52603A220309CE0028DB62 /* BHBNetworkSpeed.h */,
+				4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */,
+			);
+			path = BHBNetworkSpeed;
+			sourceTree = "<group>";
+		};
 		4F78874021E99F6500653A6C /* viplist */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +323,7 @@
 				C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */,
 				4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */,
 				4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */,
+				4F526038220309CE0028DB62 /* Addtations */,
 				C72EE44C214F51ED00288C1C /* Class */,
 				C70B579A2112AC200024D60B /* Data */,
 				4FB74BA721CE85AC00F52070 /* Other */,
@@ -322,6 +344,7 @@
 		C72EE441214F460B00288C1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4F52603E22031B000028DB62 /* back@2x.png */,
 				4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */,
 				C72EE488214F588D00288C1C /* download@2x.png */,
 				C72EE446214F4BEE00288C1C /* platlist@2x.png */,
@@ -525,12 +548,12 @@
 			files = (
 				4F78874921E99F6500653A6C /* 搜狐@2x.png in Resources */,
 				C7240AA11FA174D3000684F1 /* LaunchScreen.storyboard in Resources */,
+				4F52603F22031B000028DB62 /* back@2x.png in Resources */,
 				4F78874E21E99F6500653A6C /* 52@2x.png in Resources */,
 				4F4D235B21E8262500E366D8 /* viplist.json in Resources */,
 				C72EE448214F4BEE00288C1C /* platlist@2x.png in Resources */,
 				C72EE449214F4BEE00288C1C /* VIP@2x.png in Resources */,
 				4F78875221E9A04000653A6C /* 4084@2x.png in Resources */,
-				C7240A9E1FA174D3000684F1 /* Assets.xcassets in Resources */,
 				4F78874A21E99F6500653A6C /* 电影天堂.png in Resources */,
 				4F78874D21E99F6500653A6C /* 腾讯视频@2x.png in Resources */,
 				C7240A9C1FA174D3000684F1 /* Main.storyboard in Resources */,
@@ -575,17 +598,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/PodInputFileList.xcfilelist",
+			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VipVideo-iPhone/Pods-VipVideo-iPhone-resources.sh",
-				"${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle",
-				"${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle",
-				"${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VipVideo-iPhone/PodOutputFileList.xcfilelist",
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXIndicatorView.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXPracticalHUD.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AXWebViewController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -623,6 +645,7 @@
 				4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */,
 				C7240A961FA174D3000684F1 /* AppDelegate.m in Sources */,
 				C72EE487214F530000288C1C /* HLMineViewController.m in Sources */,
+				4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */,
 				C70EBD2C2016D4C500413F85 /* HLPlayerViewController.m in Sources */,
 				4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */,
 			);
@@ -776,7 +799,10 @@
 				DEVELOPMENT_TEAM = M675EFBDE2;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4169b125-e44b-4aca-a87c-6fc6ed81ea1f";
@@ -797,7 +823,10 @@
 				DEVELOPMENT_TEAM = M675EFBDE2;
 				GCC_PREFIX_HEADER = "VipVideo-iPhone/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/VipVideo-iPhone/Support File/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7e347f5b-4673-4593-bcfc-b65051128cdc";

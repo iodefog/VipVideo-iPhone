@@ -11,14 +11,6 @@
 #import "AppDelegate.h"
 #import "AppDelegate+Download.h"
 
-#define QSPDownloadTool_Document_Path                   [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
-#define QSPDownloadTool_DownloadDataDocument_Path       [QSPDownloadTool_Document_Path stringByAppendingPathComponent:@"QSPDownloadTool_DownloadDataDocument_Path"]
-#define QSPDownloadTool_DownloadSources_Path            [QSPDownloadTool_Document_Path stringByAppendingPathComponent:@"QSPDownloadTool_downloadSources.data"]
-#define QSPDownloadTool_DownloadFinishedSources_Path     [QSPDownloadTool_Document_Path stringByAppendingPathComponent:@"QSPDownloadTool_DownloadFinishedSources.data"]
-#define QSPDownloadTool_OffLineStyle_Key                @"QSPDownloadTool_OffLineStyle_Key"
-#define QSPDownloadTool_OffLine_Key                     @"QSPDownloadTool_OffLine_Key"
-
-
 #define QSPDownloadTool_Limit                           1024.0
 
 @interface QSPDownloadSource ()<HLDownloadDelegate>

@@ -120,9 +120,23 @@ then
     fi
   done <<<"$OTHER_XCASSETS"
 
-  if [ -z ${ASSETCATALOG_COMPILER_APPICON_NAME+x} ]; then
-    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
-  else
+  if [ -n ${ASSETCATALOG_COMPILER_APPICON_NAME+x} ] && [ -z ${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME+x} ]; then
     printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --app-icon "${ASSETCATALOG_COMPILER_APPICON_NAME}" --output-partial-info-plist "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist"
+  elif [ -z ${ASSETCATALOG_COMPILER_APPICON_NAME+x} ] && [ -n ${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME+x} ]; then
+    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --launch-image "${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME}" --output-partial-info-plist "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist"
+  elif [ -n ${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME+x} ] && [ -n ${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME+x} ]; then
+    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}" --launch-image "${ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME}" --app-icon "${ASSETCATALOG_COMPILER_APPICON_NAME}" --output-partial-info-plist "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist"
+  else
+    printf "%s\0" "${XCASSET_FILES[@]}" | xargs -0 xcrun actool --output-format human-readable-text --notices --warnings --platform "${PLATFORM_NAME}" --minimum-deployment-target "${!DEPLOYMENT_TARGET_SETTING_NAME}" ${TARGET_DEVICE_ARGS} --compress-pngs --compile "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
   fi
+fi
+
+# process info.plist file, add xcassets info to the info.plist file
+if [ -r "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist" ]; then
+  echo "cocoapods-xcfilelist-patch process info.plist"
+  TEMP_INFO_PLIST_FILE="${TARGET_TEMP_DIR}/cocoapods_temp_info.plist"
+  plutil -p "${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist"
+  plutil -convert xml1 -o "${TEMP_INFO_PLIST_FILE}" "${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}"
+  /usr/libexec/PlistBuddy -c "Merge ${TARGET_TEMP_DIR}/assetcatalog_generated_info_cocoapods.plist" "${TEMP_INFO_PLIST_FILE}"
+  plutil -convert binary1 -o "${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}" "${TEMP_INFO_PLIST_FILE}"
 fi

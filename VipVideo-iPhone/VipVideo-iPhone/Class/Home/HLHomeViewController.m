@@ -132,8 +132,9 @@
 
     HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
     videoVC.urlItem = object;
-    videoVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:videoVC animated:YES];
+    UINavigationController *videoNav = [[UINavigationController alloc] initWithRootViewController:videoVC];
+    
+    [self presentViewController:videoNav animated:YES completion:nil];
 }
 
 @end

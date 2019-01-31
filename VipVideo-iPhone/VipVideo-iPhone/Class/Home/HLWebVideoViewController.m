@@ -40,17 +40,6 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    if (!_leftButton) {
-        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [leftButton setImage:[UIImage imageNamed:@"platlist"] forState:UIControlStateNormal];
-//        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
-        leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
-        [leftButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-        leftButton.frame = CGRectMake(0, 0, 30, 44);
-        [leftButton addTarget:self action:@selector(videosClicked:) forControlEvents:UIControlEventTouchUpInside];
-        self.leftButton = leftButton;
-    }
-    
     if (!self.rightButton) {
         UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //        [rightButton setTitle:@"转换" forState:UIControlStateNormal];
@@ -82,6 +71,24 @@
 //        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
         self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc] initWithCustomView:self.rightButton],];
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!_leftButton) {
+        UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        //        [leftButton setTitle:@"平台" forState:UIControlStateNormal];
+        leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        [leftButton setTitleColor:self.view.tintColor forState:UIControlStateNormal];
+        leftButton.frame = CGRectMake(0, 0, 30, 44);
+        [leftButton addTarget:self action:@selector(backClicked:) forControlEvents:UIControlEventTouchUpInside];
+        self.leftButton = leftButton;
+    }
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftButton];
 }
 
 - (void)viewDidLoad {
@@ -204,6 +211,11 @@ static bool isShow = NO;
     } dismissBlock:^{
         NSLog(@"user canceled. do nothing.");
     }];
+}
+
+- (void)backClicked:(UIButton *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 // 接口切换点击
