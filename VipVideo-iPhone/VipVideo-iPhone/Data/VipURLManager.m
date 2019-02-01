@@ -67,7 +67,7 @@
 
 - (void)initDefaultData{
     NSError *error = nil;
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"viplist" ofType:@"json"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"vlist" ofType:@"json"];
     if (!path) {
         return;
     }
