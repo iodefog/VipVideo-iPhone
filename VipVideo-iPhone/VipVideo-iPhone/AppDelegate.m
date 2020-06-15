@@ -28,7 +28,6 @@
 
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:HLVideoIphoneUAisOn];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"UserAgent": HLiPhoneUA}];
-
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [Bugly startWithAppId:@"c436559ac2"];

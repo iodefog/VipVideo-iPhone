@@ -20,12 +20,14 @@
 		4F3A3A2F220339B500930A31 /* 搜狐@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F3A3A25220339B500930A31 /* 搜狐@2x.png */; };
 		4F52603C220309CE0028DB62 /* BHBNetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */; };
 		4F52603F22031B000028DB62 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F52603E22031B000028DB62 /* back@2x.png */; };
-		4F5260432203DA550028DB62 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5260422203DA550028DB62 /* vlist.json */; };
 		4F62A60021EB761C0044C07D /* empty_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */; };
 		4FA2AA9E20E27B9E0010144F /* HLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */; };
 		4FB74BAA21CE85AC00F52070 /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB74BA821CE85AC00F52070 /* UIButton+Addition.m */; };
 		4FB74BAC21CE868A00F52070 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FB74BAB21CE868A00F52070 /* README.md */; };
 		4FD3887121E991E100D1A3C0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */; };
+		4FE6E49C24972154006AFB79 /* vlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6E49B24972154006AFB79 /* vlist.json */; };
+		4FE6E49F24974BB6006AFB79 /* icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6E49D24974BB6006AFB79 /* icon-76.png */; };
+		4FE6E4A024974BB6006AFB79 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6E49E24974BB6006AFB79 /* icon-76@2x.png */; };
 		C70B57A62112AC200024D60B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579C2112AC200024D60B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C70B57A72112AC200024D60B /* VipURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B579D2112AC200024D60B /* VipURLManager.m */; };
 		C70B57A82112AC200024D60B /* HybridNSURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = C70B57A02112AC200024D60B /* HybridNSURLProtocol.m */; };
@@ -109,7 +111,6 @@
 		4F52603A220309CE0028DB62 /* BHBNetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BHBNetworkSpeed.h; sourceTree = "<group>"; };
 		4F52603B220309CE0028DB62 /* BHBNetworkSpeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BHBNetworkSpeed.m; sourceTree = "<group>"; };
 		4F52603E22031B000028DB62 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
-		4F5260422203DA550028DB62 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = vlist.json; path = ../../../../../../../../Hexo/source/text/vlist.json; sourceTree = "<group>"; };
 		4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_placeholder@2x.png"; sourceTree = "<group>"; };
 		4FA2AA9C20E27B9E0010144F /* HLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarController.h; sourceTree = "<group>"; };
 		4FA2AA9D20E27B9E0010144F /* HLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarController.m; sourceTree = "<group>"; };
@@ -118,6 +119,9 @@
 		4FB74BAB21CE868A00F52070 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		4FD3886F21E991E100D1A3C0 /* HLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
 		4FD3887021E991E100D1A3C0 /* HLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		4FE6E49B24972154006AFB79 /* vlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vlist.json; sourceTree = "<group>"; };
+		4FE6E49D24974BB6006AFB79 /* icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76.png"; sourceTree = "<group>"; };
+		4FE6E49E24974BB6006AFB79 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
 		683C5E4E62598A710103B4DC /* libPods-VipVideo-iPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VipVideo-iPhone.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70B579B2112AC200024D60B /* VipURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipURLManager.h; sourceTree = "<group>"; };
 		C70B579C2112AC200024D60B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
@@ -131,7 +135,7 @@
 		C70B57A52112AC200024D60B /* NSURLProtocol+UIWebVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+UIWebVIew.h"; sourceTree = "<group>"; };
 		C70EBD2A2016D4C500413F85 /* HLPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLPlayerViewController.h; sourceTree = "<group>"; };
 		C70EBD2B2016D4C500413F85 /* HLPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLPlayerViewController.m; sourceTree = "<group>"; };
-		C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VipVideo-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7240A911FA174D3000684F1 /* VipVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VipVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7240A941FA174D3000684F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7240A951FA174D3000684F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C7240A9B1FA174D3000684F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,6 +260,7 @@
 		C70B579A2112AC200024D60B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4FE6E49B24972154006AFB79 /* vlist.json */,
 				C70B579E2112AC200024D60B /* JSONKit.h */,
 				C70B579C2112AC200024D60B /* JSONKit.m */,
 				C70B579B2112AC200024D60B /* VipURLManager.h */,
@@ -287,7 +292,6 @@
 				C7240A9F1FA174D3000684F1 /* LaunchScreen.storyboard */,
 				C7240AA21FA174D3000684F1 /* Info.plist */,
 				C7240AA31FA174D3000684F1 /* main.m */,
-				4F5260422203DA550028DB62 /* vlist.json */,
 			);
 			path = "Support File";
 			sourceTree = "<group>";
@@ -306,7 +310,7 @@
 		C7240A921FA174D3000684F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */,
+				C7240A911FA174D3000684F1 /* VipVideo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +346,8 @@
 		C72EE441214F460B00288C1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4FE6E49D24974BB6006AFB79 /* icon-76.png */,
+				4FE6E49E24974BB6006AFB79 /* icon-76@2x.png */,
 				4F3A3A1B220339B500930A31 /* viplist */,
 				4F52603E22031B000028DB62 /* back@2x.png */,
 				4F62A5FF21EB761C0044C07D /* empty_placeholder@2x.png */,
@@ -488,7 +494,7 @@
 			);
 			name = "VipVideo-iPhone";
 			productName = "VipVideo-iPhone";
-			productReference = C7240A911FA174D3000684F1 /* VipVideo-iPhone.app */;
+			productReference = C7240A911FA174D3000684F1 /* VipVideo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -561,7 +567,9 @@
 				4FB74BAC21CE868A00F52070 /* README.md in Resources */,
 				C72EE489214F588D00288C1C /* download@2x.png in Resources */,
 				4F3A3A2A220339B500930A31 /* 视频@2x.png in Resources */,
-				4F5260432203DA550028DB62 /* vlist.json in Resources */,
+				4FE6E49C24972154006AFB79 /* vlist.json in Resources */,
+				4FE6E49F24974BB6006AFB79 /* icon-76.png in Resources */,
+				4FE6E4A024974BB6006AFB79 /* icon-76@2x.png in Resources */,
 				4F3A3A29220339B500930A31 /* 爱奇艺@2x.png in Resources */,
 				4F3A3A2B220339B500930A31 /* 优酷@2x.png in Resources */,
 				C72EE444214F460B00288C1C /* home@2x.png in Resources */,
@@ -803,7 +811,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE = "4169b125-e44b-4aca-a87c-6fc6ed81ea1f";
 				PROVISIONING_PROFILE_SPECIFIER = Common_lhl_Development;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -827,7 +835,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.vipvideo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VipVideo;
 				PROVISIONING_PROFILE = "7e347f5b-4673-4593-bcfc-b65051128cdc";
 				PROVISIONING_PROFILE_SPECIFIER = vipvideo_Distribution;
 				TARGETED_DEVICE_FAMILY = "1,2";

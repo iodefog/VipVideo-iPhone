@@ -33,7 +33,7 @@
 - (void)createUI
 {
     self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    self.iconImageView.backgroundColor = [UIColor lightGrayColor];
+    self.iconImageView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
     self.iconImageView.layer.cornerRadius = 10;
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
