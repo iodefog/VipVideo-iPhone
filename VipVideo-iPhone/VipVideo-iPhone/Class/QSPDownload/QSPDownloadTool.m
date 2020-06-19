@@ -448,7 +448,7 @@ static QSPDownloadTool *_shareInstance;
 {
     if (source.style == QSPDownloadSourceStyleSuspend || source.style == QSPDownloadSourceStyleFail) {
         source.style = QSPDownloadSourceStyleDown;
-        if([source.netPath containsString:@"m3u8"]){
+        if([source.netPath containsString:@"m3u8"] && source.downloader){
             [source.downloader resumeDownload];
         }else {
             NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[source.netPath stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];

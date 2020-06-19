@@ -430,6 +430,7 @@
     }
     
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+    playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [VipURLManager sharedInstance].currentPlayer = playerVC;
     playerVC.canDownload = NO;
     playerVC.url = [NSURL URLWithString:movieUrl];

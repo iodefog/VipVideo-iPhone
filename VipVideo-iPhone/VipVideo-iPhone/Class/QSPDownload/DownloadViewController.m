@@ -11,9 +11,8 @@
 #import "FinishedViewController.h"
 #import "UIViewController+.h"
 #import "HLPlayerViewController.h"
-#import "UIScrollView+EmptyDataSet.h"
 
-@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
+@interface DownloadViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate>
 
 @property (strong, nonatomic) NSMutableArray *dataArr;
 @property (strong, nonatomic) UILabel *emptyLabel;
@@ -39,48 +38,18 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [_dataArr removeAllObjects];
-    [_dataArr addObjectsFromArray:[QSPDownloadTool shareInstance].downloadSources];
-    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"下载";
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:@"已完成" forState:UIControlStateNormal];
-    [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
-    button.titleLabel.font = [UIFont systemFontOfSize:15];
-    [button addTarget:self action:@selector(pushFinishedVC:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [self.navigationItem setRightBarButtonItem:item];
+    self.title = @"下载中";
     
     [[QSPDownloadTool shareInstance] addDownloadToolDelegate:self];
-    
-    self.tableView.emptyDataSetSource = self;
-    self.tableView.emptyDataSetDelegate = self;
-    
-    // A little trick for removing the cell separators
     self.tableView.tableFooterView = [UIView new];
     
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-}
-
-- (void)back{}
-
-- (void)pushFinishedVC:(UIButton *)sender{
-    FinishedViewController *finishVC = [[FinishedViewController alloc] init];
-    finishVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:finishVC animated:YES];
-}
-
-#pragma mark -
-
-- (UIImage *)imageForEmptyDataSet:(UIScrollView *)scrollView
-{
-    return [UIImage imageNamed:@"empty_placeholder"];
+    [_dataArr addObjectsFromArray:[QSPDownloadTool shareInstance].downloadSources];
+    [self.tableView reloadData];
 }
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>代理方法
@@ -134,6 +103,7 @@
         QSPDownloadSource *source = self.dataArr[indexPath.row];
         
         HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+        playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
         [VipURLManager sharedInstance].currentPlayer = playerVC;
         playerVC.url = [NSURL fileURLWithPath:source.location];
         playerVC.canDownload = NO;

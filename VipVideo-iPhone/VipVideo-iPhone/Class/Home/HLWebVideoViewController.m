@@ -183,6 +183,7 @@ static bool isShow = NO;
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
     [VipURLManager sharedInstance].currentPlayer = playerVC;
     playerVC.url = self.currentVideoUrl;
+    playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:playerVC animated:YES completion:nil];
 }
 

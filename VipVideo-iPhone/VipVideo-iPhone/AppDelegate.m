@@ -11,7 +11,7 @@
 #import "QSPDownloadTool.h"
 #import "NSURLProtocol+WKWebVIew.h"
 #import <Bugly/Bugly.h>
-
+#import "BHBNetworkSpeed.h"
 
 @interface AppDelegate ()
 
@@ -33,8 +33,11 @@
     [Bugly startWithAppId:@"c436559ac2"];
     
     [VipURLManager sharedInstance];
+    [QSPDownloadTool shareInstance];
     [[QSPDownloadTool shareInstance] startAllTask];
+    [[BHBNetworkSpeed shareNetworkSpeed] startMonitoringNetworkSpeed];
     
+    NSLog(@"%@", NSHomeDirectory());
     return YES;
 }
 

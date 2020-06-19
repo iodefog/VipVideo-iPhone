@@ -2,7 +2,7 @@
     "platformlist": [
         {
             "name": "CCTV直播",
-            "icon": "",
+            "icon": "CCTV",
             "url": "http://tv.cctv.com/live/cctv5/"
         }
         ,
@@ -29,7 +29,7 @@
             "url": "https://www.youku.com/"
         }, {
             "name": "抖音网页版",
-            "icon": "抖音网页版",
+            "icon": "抖音",
             "canvip": 0,
             "url": "http://douyin.bm8.com.cn/"
         }

@@ -10,11 +10,13 @@
 #import "QSPDownloadTool.h"
 #import "HLPlayerViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "DownloadViewController.h"
 
 @interface FinishedViewController ()<UITableViewDataSource, UITableViewDelegate, QSPDownloadToolDelegate>
 
 @property (weak, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArr;
+@property (strong, nonatomic) UILabel *emptyLabel;
 
 @end
 
@@ -37,7 +39,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"下载已完成";
+    self.title = @"已下载";
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"下载中" forState:UIControlStateNormal];
+    [button setTitleColor:self.view.tintColor forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont systemFontOfSize:15];
+    [button addTarget:self action:@selector(pushFinishedVC:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [self.navigationItem setRightBarButtonItem:item];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     [self.view addSubview:tableView];
@@ -48,7 +58,16 @@
     
     [[QSPDownloadTool shareInstance] addDownloadToolDelegate:self];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleDone target:self action:@selector(back)];
 }
+
+- (void)pushFinishedVC:(UIButton *)sender{
+    DownloadViewController *finishVC = [[DownloadViewController alloc] init];
+    finishVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:finishVC animated:YES];
+}
+
+- (void)back{}
 
 #pragma mark - <UITableViewDataSource, UITableViewDelegate>代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -57,6 +76,12 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+   if (self.dataArr.count > 0) {
+        [_emptyLabel removeFromSuperview];
+    }
+    else {
+        [self.view addSubview:self.emptyLabel];
+    }
     return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,6 +106,7 @@
     QSPDownloadSource *source = self.dataArr[indexPath.row];
     NSLog(@"%@", source.location);
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+    playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [VipURLManager sharedInstance].currentPlayer = playerVC;
     playerVC.url = [NSURL fileURLWithPath:source.location];
     playerVC.canDownload = NO;
@@ -114,6 +140,19 @@
 {
     [self.dataArr addObject:source];
     [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.dataArr.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationMiddle];
+}
+
+
+#pragma mark -
+
+- (UILabel *)emptyLabel{
+    if (!_emptyLabel) {
+        _emptyLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
+        _emptyLabel.text = @"暂无数据";
+        _emptyLabel.textAlignment = NSTextAlignmentCenter;
+        _emptyLabel.textColor = [UIColor grayColor];
+    }
+    return _emptyLabel;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "DownLoadCell.h"
+#import "BHBNetworkSpeed.h"
 
 @interface DownLoadCell ()<QSPDownloadSourceDelegate>
 
@@ -14,7 +15,7 @@
 #define DownLoadCell_SmollFont          [UIFont systemFontOfSize:10]
 #define DownloadCell_Spcing             8.0
 @property (weak, nonatomic) UIProgressView *progressView;
-@property (weak, nonatomic) UIButton *button;
+//@property (weak, nonatomic) UIButton *button;
 @property (weak, nonatomic) UILabel *totalLabel;
 @property (weak, nonatomic) UILabel *progressLabel;
 @property (weak, nonatomic) UILabel *rateLabel;
@@ -38,34 +39,34 @@
         self.bytes = 0;
         
         self.textLabel.text = source.fileName;
-        if (source.totalBytesExpectedToWrite) {
-            float progress = source.totalBytesWritten/(float)source.totalBytesExpectedToWrite;
-            self.totalLabel.text = [QSPDownloadTool calculationDataWithBytes:source.totalBytesExpectedToWrite];
-            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
-            self.progressView.progress = progress;
-        }
-        else
-        {
-            self.totalLabel.text = nil;
-            self.progressLabel.text = nil;
-            self.rateLabel.text = nil;
-            self.progressView.progress = 0;
-            
-            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", _source.progress*100];
-        }
+//        if (source.totalBytesExpectedToWrite) {
+//            float progress = source.totalBytesWritten/(float)source.totalBytesExpectedToWrite;
+//            self.totalLabel.text = [QSPDownloadTool calculationDataWithBytes:source.totalBytesWritten];
+//            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
+//            self.progressView.progress = progress;
+//        }
+//        else
+//        {
+//            self.totalLabel.text = nil;
+//            self.progressLabel.text = nil;
+//            self.rateLabel.text = nil;
+//            self.progressView.progress = 0;
+//
+//            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", _source.progress*100];
+//        }
         
-        self.rateLabel.text = nil;
-        switch (source.style) {
-            case QSPDownloadSourceStyleDown:
-                [self.button setTitle:@"暂停" forState:UIControlStateNormal];
-                break;
-            case QSPDownloadSourceStyleSuspend:
-                [self.button setTitle:@"下载" forState:UIControlStateNormal];
-                break;
-                
-            default:
-                break;
-        }
+//        self.rateLabel.text = nil;
+//        switch (source.style) {
+//            case QSPDownloadSourceStyleDown:
+//                [self.button setTitle:@"暂停" forState:UIControlStateNormal];
+//                break;
+//            case QSPDownloadSourceStyleSuspend:
+//                [self.button setTitle:@"下载" forState:UIControlStateNormal];
+//                break;
+//
+//            default:
+//                break;
+//        }
     }
 }
 
@@ -74,6 +75,8 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.textLabel.font = DownLoadCell_BigFont;
         self.textLabel.textColor = [UIColor blackColor];
+        
+        self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
         UILabel *label = [[UILabel alloc] init];
         label.font = DownLoadCell_SmollFont;
@@ -98,21 +101,21 @@
         [self.contentView addSubview:progressView];
         self.progressView = progressView;
         
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.titleLabel.font = [UIFont systemFontOfSize:10];
-        [button setTitle:@"暂停" forState:UIControlStateNormal];
-        UIColor *color = [UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1];
-        [button setTitleColor:color forState:UIControlStateNormal];
-        [button setTitleColor:color forState:UIControlStateSelected];
-        [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-        button.layer.borderWidth = 0.5;
-        button.layer.borderColor = [UIColor grayColor].CGColor;
-        button.layer.cornerRadius = 5;
-        button.layer.masksToBounds = YES;
-        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:button];
-        self.button = button;
-        
+//        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        button.titleLabel.font = [UIFont systemFontOfSize:10];
+//        [button setTitle:@"暂停" forState:UIControlStateNormal];
+//        UIColor *color = [UIColor colorWithRed:0 green:122/255.0 blue:255/255.0 alpha:1];
+//        [button setTitleColor:color forState:UIControlStateNormal];
+//        [button setTitleColor:color forState:UIControlStateSelected];
+//        [button setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+//        button.layer.borderWidth = 0.5;
+//        button.layer.borderColor = [UIColor grayColor].CGColor;
+//        button.layer.cornerRadius = 5;
+//        button.layer.masksToBounds = YES;
+//        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+//        [self.contentView addSubview:button];
+//        self.button = button;
+//
         [self addLongGesture];
     }
     
@@ -130,16 +133,16 @@
     }
 }
 
-- (void)buttonClicked:(UIButton *)sender
-{
-    if ([sender.currentTitle isEqualToString:@"下载"]) {
-        [[QSPDownloadTool shareInstance] continueDownload:self.source];
-    }
-    else
-    {
-        [[QSPDownloadTool shareInstance] suspendDownload:self.source];
-    }
-}
+//- (void)buttonClicked:(UIButton *)sender
+//{
+//    if ([sender.currentTitle isEqualToString:@"下载"]) {
+//        [[QSPDownloadTool shareInstance] continueDownload:self.source];
+//    }
+//    else
+//    {
+//        [[QSPDownloadTool shareInstance] suspendDownload:self.source];
+//    }
+//}
 
 - (void)layoutSubviews
 {
@@ -150,7 +153,7 @@
     CGFloat H = self.frame.size.height - 2*Y;
     CGFloat W = H;
     CGFloat X = self.frame.size.width - W - DownloadCell_Spcing;
-    self.button.frame = CGRectMake(X, Y, W, H);
+//    self.button.frame = CGRectMake(X, Y, W, H);
     
     W = X - 2*DownloadCell_Spcing;
     X = DownloadCell_Spcing;
@@ -168,10 +171,12 @@
     self.progressLabel.frame = CGRectMake(X, Y, W, H);
     
     W = [self.rateLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width;
-    X = self.button.frame.origin.x - DownloadCell_Spcing - W;
+//    X = self.button.frame.origin.x - DownloadCell_Spcing - W;
+    X = self.frame.origin.x - DownloadCell_Spcing - W;
     self.rateLabel.frame = CGRectMake(X, Y, W, H);
     
-    W = self.button.frame.origin.x - 2*DownloadCell_Spcing;
+//    W = self.button.frame.origin.x - 2*DownloadCell_Spcing;
+    W = self.frame.origin.x - 2*DownloadCell_Spcing;
     X = DownloadCell_Spcing;
     Y = self.frame.size.height - DownloadCell_Spcing;
     H = DownloadCell_Spcing;
@@ -196,9 +201,9 @@
             self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
             self.progressLabel.frame = CGRectMake(self.totalLabel.frame.origin.x + self.totalLabel.frame.size.width + DownloadCell_Spcing, self.progressLabel.frame.origin.y, [self.progressLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width, self.progressLabel.frame.size.height);
             
-            self.rateLabel.text = [NSString stringWithFormat:@"%@/s", [QSPDownloadTool calculationDataWithBytes:(int64_t)(self.bytes/timeInterval)]];
+            self.rateLabel.text = [[BHBNetworkSpeed shareNetworkSpeed] receivedNetworkSpeed];
             CGFloat W = [self.rateLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width;
-            self.rateLabel.frame = CGRectMake(self.button.frame.origin.x - DownloadCell_Spcing - W, self.rateLabel.frame.origin.y, W, self.rateLabel.frame.size.height);
+            self.rateLabel.frame = CGRectMake(self.frame.origin.x - DownloadCell_Spcing - W, self.rateLabel.frame.origin.y, W, self.rateLabel.frame.size.height);
             
             self.lastDate = now;
             self.bytes = 0;
@@ -211,14 +216,17 @@
 }
 - (void)downloadSource:(QSPDownloadSource *)source changedStyle:(QSPDownloadSourceStyle)style
 {
-    if (style == QSPDownloadSourceStyleDown) {
-        [self.button setTitle:@"暂停" forState:UIControlStateNormal];
-    }
-    else if (style == QSPDownloadSourceStyleSuspend)
-    {
-        [self.button setTitle:@"下载" forState:UIControlStateNormal];
-        self.rateLabel.text = nil;
-    }
+//    if (style == QSPDownloadSourceStyleDown) {
+//        [self.button setTitle:@"暂停" forState:UIControlStateNormal];
+//    }
+//    else if (style == QSPDownloadSourceStyleSuspend)
+//    {
+//        [self.button setTitle:@"下载" forState:UIControlStateNormal];
+//        self.rateLabel.text = nil;
+//    }
+    
+    
+    
 }
 
 - (void)downloadSource:(QSPDownloadSource *)source
@@ -228,7 +236,8 @@
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         if (!self.totalLabel.text) {
-            self.totalLabel.text = @(source.downloader.totalSize).stringValue;
+            self.totalLabel.text = [QSPDownloadTool calculationDataWithBytes:source.totalBytesExpectedToWrite];
+//            self.totalLabel.text = @(source.downloader.totalSize).stringValue;
             self.totalLabel.frame = CGRectMake(self.totalLabel.frame.origin.x, self.totalLabel.frame.origin.y, [self.totalLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width, self.totalLabel.frame.size.height);
         }
         
@@ -236,13 +245,14 @@
         if (self.lastDate) {
             NSTimeInterval timeInterval = [now timeIntervalSinceDate:self.lastDate];
             if (timeInterval > 1) {
+                
                 self.progressView.progress = progress;
                 self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
                 self.progressLabel.frame = CGRectMake(self.totalLabel.frame.origin.x + self.totalLabel.frame.size.width + DownloadCell_Spcing, self.progressLabel.frame.origin.y, [self.progressLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width, self.progressLabel.frame.size.height);
                 
-                self.rateLabel.text = [NSString stringWithFormat:@"%@/s", [QSPDownloadTool calculationDataWithBytes:(int64_t)(self.bytes/timeInterval)]];
+                self.rateLabel.text = (source.style == QSPDownloadSourceStyleDown) ? [[BHBNetworkSpeed shareNetworkSpeed] receivedNetworkSpeed] : @"";
                 CGFloat W = [self.rateLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: DownLoadCell_SmollFont} context:nil].size.width;
-                self.rateLabel.frame = CGRectMake(self.button.frame.origin.x - DownloadCell_Spcing - W, self.rateLabel.frame.origin.y, W, self.rateLabel.frame.size.height);
+                self.rateLabel.frame = CGRectMake(self.frame.origin.x - DownloadCell_Spcing - W, self.rateLabel.frame.origin.y, W, self.rateLabel.frame.size.height);
                 
                 self.lastDate = now;
                 self.bytes = 0;

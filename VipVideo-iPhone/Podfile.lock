@@ -17,7 +17,6 @@ PODS:
   - CocoaLumberjack (3.5.0):
     - CocoaLumberjack/Core (= 3.5.0)
   - CocoaLumberjack/Core (3.5.0)
-  - DZNEmptyDataSet (1.8.1)
   - FTPopOverMenu (2.0.3)
   - HLAdditions (1.0.4)
   - Masonry (1.1.0)
@@ -31,13 +30,12 @@ DEPENDENCIES:
   - AXWebViewController
   - Bugly
   - CocoaHTTPServer
-  - DZNEmptyDataSet
   - FTPopOverMenu
   - HLAdditions
   - Masonry
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Aspects
     - AXIndicatorView
     - AXNavigationBackItemInjection
@@ -47,7 +45,6 @@ SPEC REPOS:
     - CocoaAsyncSocket
     - CocoaHTTPServer
     - CocoaLumberjack
-    - DZNEmptyDataSet
     - FTPopOverMenu
     - HLAdditions
     - Masonry
@@ -63,12 +60,11 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
   CocoaHTTPServer: 5624681fc3473d43b18202f635f9b3abb013b530
   CocoaLumberjack: cffaa70a9336515228178e3669b71bd49d343850
-  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FTPopOverMenu: 8aa89de66e72b53db3e7eeab42243d393237768f
   HLAdditions: 611544862c3c85a2c77f165b3e426391e1cbddf0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
 
-PODFILE CHECKSUM: 7aeb8007c6d13122d7fdc2e3cc6016bc23017ee8
+PODFILE CHECKSUM: 72e46e1211eca235fbe4cb099b489ce35a51bf4b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.0.beta.1

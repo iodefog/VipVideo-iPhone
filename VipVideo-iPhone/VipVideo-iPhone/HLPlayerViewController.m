@@ -104,7 +104,7 @@
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
         [invocation setSelector:selector];
         [invocation setTarget:[UIDevice currentDevice]];
-        int val                  = orientation;
+        int val = (int)orientation;
         [invocation setArgument:&val atIndex:2];
         [invocation invoke];
     }

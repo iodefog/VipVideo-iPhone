@@ -98,6 +98,7 @@ static NSString* const KHybridNSURLProtocolHKey = @"KHybridNSURLProtocol";
             
             static bool isShow = NO;
             HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
+            playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
             [VipURLManager sharedInstance].currentPlayer = playerVC;
             
             NSLog(@"RealVideoUrl %@", [urlArray lastObject]);

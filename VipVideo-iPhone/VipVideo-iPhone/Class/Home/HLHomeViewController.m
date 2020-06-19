@@ -133,7 +133,8 @@
     HLWebVideoViewController *videoVC = [[HLWebVideoViewController alloc] init];
     videoVC.urlItem = object;
     UINavigationController *videoNav = [[UINavigationController alloc] initWithRootViewController:videoVC];
-    
+    videoNav.modalPresentationStyle = UIModalPresentationFullScreen;
+
     [self presentViewController:videoNav animated:YES completion:nil];
 }
 

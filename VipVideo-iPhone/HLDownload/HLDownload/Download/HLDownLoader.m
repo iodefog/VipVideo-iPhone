@@ -228,6 +228,7 @@ static NSLock *downloadLock;
     
     
     self.writtenSize += progresser.writtenSize;
+    self.totalSize = progresser.totalSize;
     
     double progress = (self.playlist.segments.count - self.downloadArray.count+1)/(float)self.playlist.segments.count;
     self.progress = progress+(progresser.writtenSize/progresser.totalSize)/self.playlist.segments.count;

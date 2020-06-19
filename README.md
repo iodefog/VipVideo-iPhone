@@ -22,17 +22,13 @@ Git 地址：
 
 [https://github.com/iodefog/VipVideo.git](https://github.com/iodefog/VipVideo.git)
 
-
-dmg地址：
-
-[https://iodefog.github.io/dmg/MVideo.dmg](https://iodefog.github.io/dmg/MVideo.dmg)
-
 ---
 
 ## 更新
 
 * 内容
 
+    * 2020-6-19 修改bug
 	* 2018-09-17  优化UI，增加我的页面（可切换PC和Iphone UA）
 	* 2018-09-10  新增崩溃统计bugly
 	* 2018-08-02  新增直播内容
@@ -94,33 +90,20 @@ dmg地址：
 
 ## 软件截图介绍
 
-1、 主页
+1、 示例图
 
-![](./images/QQ20180709-162310.png)
-
----
-
-2、 下载页
-
-![](./images/QQ20180709-162332.png)
+![](./images/1.png)
+![](./images/2.png)
+![](./images/3.png)
 
 ---
 
-3、 播放页
+2、 播放页
 
 ![](./images/player.png)
 
 
 ---
-
-* 应大家的要求，放出源码，仅供交流使用。
-* 这里仅仅给出源码，接口已经移除。有需要的请自行配置url路径。
-* 如果有需要我这边出接口的，请适当给一些赞助。赞助后，定期下发给vip转换url或者dmg。
-
-
-![](./images/erweima.png)
-
-----
 
 如需联系或者合作，请发送邮件 [iodefog@gmail.com](mailto:iodefog@gmail.com)
 
