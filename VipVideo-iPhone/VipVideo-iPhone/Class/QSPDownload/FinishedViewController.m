@@ -108,7 +108,9 @@
     HLPlayerViewController *playerVC = [[HLPlayerViewController alloc] init];
     playerVC.modalPresentationStyle = UIModalPresentationFullScreen;
     [VipURLManager sharedInstance].currentPlayer = playerVC;
-    playerVC.url = [NSURL fileURLWithPath:source.location];
+    if (source.location) {
+        playerVC.url = [NSURL fileURLWithPath:source.location];        
+    }
     playerVC.canDownload = NO;
     [self presentViewController:playerVC animated:YES completion:nil];
 }

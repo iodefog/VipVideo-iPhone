@@ -39,23 +39,23 @@
         self.bytes = 0;
         
         self.textLabel.text = source.fileName;
-//        if (source.totalBytesExpectedToWrite) {
-//            float progress = source.totalBytesWritten/(float)source.totalBytesExpectedToWrite;
-//            self.totalLabel.text = [QSPDownloadTool calculationDataWithBytes:source.totalBytesWritten];
-//            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
-//            self.progressView.progress = progress;
-//        }
-//        else
-//        {
-//            self.totalLabel.text = nil;
-//            self.progressLabel.text = nil;
-//            self.rateLabel.text = nil;
-//            self.progressView.progress = 0;
-//
-//            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", _source.progress*100];
-//        }
+        if (source.totalBytesExpectedToWrite) {
+            float progress = source.totalBytesWritten/(float)source.totalBytesExpectedToWrite;
+            self.totalLabel.text = [QSPDownloadTool calculationDataWithBytes:source.totalBytesWritten];
+            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", progress*100];
+            self.progressView.progress = progress;
+        }
+        else
+        {
+            self.totalLabel.text = nil;
+            self.progressLabel.text = nil;
+            self.rateLabel.text = nil;
+            self.progressView.progress = 0;
+
+            self.progressLabel.text = [NSString stringWithFormat:@"已下载：%.1f%%", _source.progress*100];
+        }
         
-//        self.rateLabel.text = nil;
+        self.rateLabel.text = nil;
 //        switch (source.style) {
 //            case QSPDownloadSourceStyleDown:
 //                [self.button setTitle:@"暂停" forState:UIControlStateNormal];

@@ -420,7 +420,7 @@ static QSPDownloadTool *_shareInstance;
  */
 - (void)suspendDownload:(QSPDownloadSource *)source
 {
-    if (source.style == QSPDownloadSourceStyleDown || source.style == QSPDownloadSourceStyleFail) {
+    if (source.style == QSPDownloadSourceStyleDown) {
         if([source.netPath containsString:@"m3u8"]){
             [source.downloader suspendDownload];
         }else {
