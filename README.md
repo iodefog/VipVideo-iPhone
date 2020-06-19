@@ -53,40 +53,6 @@ Git 地址：
 
 ---
 
-## 解析源（需要代码自行配置）
-
-1.VipURLManager.m
-
-```
-#import "VipURLManager.h"
-#import "AppDelegate.h"
-#import "JSONKit.h"
-
-#warning 这里是否需要线上 vipurl，可直接用本地“mviplist.json”
-
-#define OnlineVipUrl @"xxx/mviplist.json"
-
-@implementation VipUrlItem
-
-```
-
-2.线上配置json地址:(也可以使用本地包地址，有时间我就会更新)
-
-[https://iodefog.github.io/text/mviplist.json](https://iodefog.github.io/text/mviplist.json)
-
----
-
-## IPA地址
-
-需要自己重签名才能安装
-
-[https://iodefog.github.io/dmg/VipVideo-iPhone.zip](https://iodefog.github.io/dmg/VipVideo-iPhone.zip)
-
-
-重签名教程
-[https://iodefog.github.io/2016/08/24/iosipa/](https://iodefog.github.io/2016/08/24/iosipa/)
-
----
 
 ## 软件截图介绍
 
